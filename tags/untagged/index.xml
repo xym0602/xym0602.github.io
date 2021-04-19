@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 19 Apr 2021 21:23:20 +0800</lastBuildDate><atom:link href="https://xym0602.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 22:34:33 +0800</lastBuildDate><atom:link href="https://xym0602.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second</title>
+      <link>https://xym0602.github.io/posts/second/</link>
+      <pubDate>Mon, 19 Apr 2021 22:34:33 +0800</pubDate>
+      
+      <guid>https://xym0602.github.io/posts/second/</guid>
+      <description>xiwang zheci keyi</description>
+    </item>
+    
     <item>
       <title>Hugo&#43;Github Pages 搭建个人博客手记萌新向</title>
       <link>https://xym0602.github.io/posts/hugo-github-personalblog/</link>
