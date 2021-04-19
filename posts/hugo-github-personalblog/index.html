@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Hugo&#43;Github Pages 搭建个人博客手记萌新向">
+<meta itemprop="description" content="0. 前言 记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己"><meta itemprop="datePublished" content="2021-04-19T21:23:20&#43;08:00" />
+<meta itemprop="dateModified" content="2021-04-19T21:23:20&#43;08:00" />
+<meta itemprop="wordCount" content="2575">
+<meta itemprop="keywords" content="untagged," /><meta property="og:title" content="Hugo&#43;Github Pages 搭建个人博客手记萌新向" />
+<meta property="og:description" content="0. 前言 记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xym0602.github.io/posts/hugo-github-personalblog/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-19T21:23:20&#43;08:00" />
+<meta property="article:modified_time" content="2021-04-19T21:23:20&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo&#43;Github Pages 搭建个人博客手记萌新向"/>
+<meta name="twitter:description" content="0. 前言 记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Hugo&#43;Github Pages 搭建个人博客手记萌新向</title>
+	<link rel="stylesheet" href="https://xym0602.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://xym0602.github.io/">Melo&#39;s Blog</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://xym0602.github.io/posts/">Posts</a>
+				<a href="https://xym0602.github.io/about-hugo/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://xym0602.github.io/posts/">Posts</a></li>
+			<li><a href="https://xym0602.github.io/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Apr 19, 2021</span></div>
+				<h1>Hugo&#43;Github Pages 搭建个人博客手记萌新向</h1>
+			</header>
+			<div class="content">
+				<h2 id="0-前言">0. 前言<a href="#0-前言" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己名字的域名，就扔在那了，一篇内容都没有写。随着时间的推移，Hexo 该怎么使用，用哪些 git 命令已经忘得一干二净了。</p>
+<p>然而最近又有了维护一个自己博客的冲动，然而安装 Hexo 并没我记忆中的那么顺利，让我不得不放弃 Hexo 而选择其他工具，最终确定 Hugo（主要是喜欢 Hugo 的这个主题），所以本篇我就记录一下我利用 Hugo 搭建个人博客的过程</p>
+<p>但是我这次先把内容先写一部分再开始着手做搭建，一是不想让这次博客又白白搭建，二是作为以后使用的备忘手记（记性不好），其中参考了网上一些大神的教程及脚本，想详细学习的话推荐去看他的教程</p>
+<blockquote>
+<p><strong>Berlin</strong>
+<a href="https://fengberlin.github.io/post/use-hugo-to-build-blog/">https://fengberlin.github.io/post/use-hugo-to-build-blog/</a></p>
+</blockquote>
+<h2 id="1-介绍">1. 介绍<a href="#1-介绍" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>原理：利用工具将写作内容（Markdown）生成 HTML 静态页，将静态页上传至 Github，利用 Github Pages 的页面链接进行访问</p>
+<h3 id="markdown">Markdown<a href="#markdown" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>是一种轻量级标记语言,它允许人们使用易读易写的纯文本格式编写文档，由于 Markdown 的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。Markdown 的优势是可以利用一些简单的语法实现排版功能，没有那么多排版、字体的设置，简介易用。弄这些的人基本应该会懂把，懂洞东懂，不懂<a href="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=1&amp;tn=baidu&amp;wd=markdown&amp;fenlei=256&amp;rsv_pq=dd688735000c19e5&amp;rsv_t=2df9kErCKYlOFqkZeoc6GLt4RRdD%2BTOq151y9yITY%2Bzy04gDNpDx8sx51Vs&amp;rqlang=cn&amp;rsv_enter=1&amp;rsv_dl=tb&amp;rsv_sug3=7&amp;rsv_sug1=3&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;rsv_btype=i&amp;inputT=2619&amp;rsv_sug4=2619&amp;rsv_sug=2">去搜</a>。</p>
+<p>Markdown 语法学习</p>
+<h3 id="静态页博客生成工具">静态页博客生成工具<a href="#静态页博客生成工具" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>Hugo、Hexo、Jekyll、Gridea 是我所了解到比较常用的工具，当然，可能还有一些更热门更好用的工具只是我不知道而已</p>
+<p>我只用过 Hexo 和 Hugo，之前用的是 Hexo，这次搭建用的是 Hugo，简要总结一下我对这俩工具的个人感受：</p>
+<p>Hugo：</p>
+<pre><code>+社区环境很好
++生成网站速度超快
++更简单轻量，能够让人更专注于写作
++个人更喜欢 Hugo 的主题
+-每次写完都要删除 public 文件夹
+-扩展性稍差
+</code></pre>
+<p>Hexo：</p>
+<pre><code>+功能性、可扩展性强
++部署命令相对简洁
++也有很多不错的主题
+-在配置 hexo 出现各种各样的问题（98.735%是我哪里没弄好）
+</code></pre>
+<p>其他的我也没使用过，想要了解的话<a href="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=1&amp;tn=baidu&amp;wd=Jekyll%20Gridea&amp;fenlei=256&amp;rsv_pq=b1250ae500089051&amp;rsv_t=2bd8lZm6jmg6wcCXNtnKNqA2Um1IPCKWY9BCSNcoTfm%2FA7U9%2Bi4FDSvbjoU&amp;rqlang=cn&amp;rsv_dl=tb&amp;rsv_enter=1&amp;rsv_sug3=5&amp;rsv_sug1=1&amp;rsv_sug7=001&amp;rsv_n=2&amp;rsv_sug2=0&amp;rsv_btype=i&amp;inputT=10381&amp;rsv_sug4=10442&amp;rsv_sug=9">去搜</a></p>
+<h3 id="github-pages">Github Pages<a href="#github-pages" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><a href="https://pages.github.com/">https://pages.github.com/</a> 介绍就不说了，看看就知道了</p>
+<h2 id="2-部署过程">2. 部署过程<a href="#2-部署过程" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="注册-github-并建立项目">注册 Github 并建立项目<a href="#注册-github-并建立项目" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>注册不说了
+登录 Github，新建 repository，名称为 <code>&lt;username&gt;.github.io</code>（必须），作为 Github Pages 的页面地址
+例如 Github 的用户名是 zhang3，则新建的项目名称为: <code>zhang3.github.io</code></p>
+<p>再创建一个 repository，名称为 myhugo（任意），作为存放除了生成静态页以外的所有文件（例如 <code>config.toml</code> 配置文件等），这样即便本地原始文件清空了，或者更换设备时，都可以把源文件迁移过来（我之前用 hexo 的时候就没同步）</p>
+<h3 id="安装-git已有请忽略">安装 git（已有请忽略）<a href="#安装-git已有请忽略" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>首先安装 git</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install git -y
+</code></pre></div><p>配置 Github 用户信息</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git config –global user.name “username”    //username填写Github用户名
+git config –global user.email “user@useremail.com”    //useremail填写Github用户名关联的邮箱地址
+</code></pre></div><p>生成 <code>ssh key</code> 关联 Github</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -C “your_email@youremail.com” <span class="c1">#youremail填写Github用户名关联的邮箱地址</span>
+</code></pre></div><p>三下回车后，会在根目录生成一个<code>.ssh</code>的文件夹，</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat ~/.ssh/id_rsa.pub
+</code></pre></div><p>复制公钥的内容，登录 Github，点击头像 -&gt; Settings —&gt; SSH and GPG keys —&gt; New SSH key，把公钥的内容粘贴到 key 中，填好 title 并点击 Add SSH key
+至此，关联完毕</p>
+<p>测试是否关联成功</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh git@github.com
+</code></pre></div><p>若返回显示您的用户名即为关联成功</p>
+<h3 id="hugo安装包下载">Hugo安装包下载<a href="#hugo安装包下载" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>我用的系统是 Ubuntu，其他系统例如 MacOS、Win、其他发行版 Linux 系统除了获取 Hugo 的方式稍有不同之外，几乎没有差别</p>
+<p>利用 apt-get 方式安装的 Hugo 版本比较旧，达不到很多主题所要求的最低标准，所以我们选择在 GitHub 上下载最新版本的安装包</p>
+<p>Hugo 安装包下载地址
+<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+<h3 id="安装-hugo">安装 Hugo<a href="#安装-hugo" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>执行命令</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dpkg -i &lt;文件名.deb&gt;
+</code></pre></div><blockquote>
+<p>dpkg 软件包管理器，-i 安装</p>
+</blockquote>
+<p>可能会报依赖关系的错误，执行命令修复安装</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install -f
+</code></pre></div><blockquote>
+<p>-f : &ndash;fix-broken 的简写形式，修复依赖关系(depends)的命令</p>
+</blockquote>
+<h3 id="初始化-hugo">初始化 Hugo<a href="#初始化-hugo" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>先 cd 到想要创建博客文件夹的上一级，尔后执行</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo new site myblog  <span class="c1"># myblog就是生成博客之后存放的文件夹</span>
+</code></pre></div><p>Hugo 会自动创建 <code>myblog</code> 文件夹并生成需要的文件</p>
+<h3 id="安装主题">安装主题<a href="#安装主题" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><a href="https://themes.gohugo.io">https://themes.gohugo.io</a> Hugo 官方汇总的主题列表，可以去看看，很多主题都有demo可以预览一下，主题的使用教程都比较详细</p>
+<p>例如安装 Notepadium 主题 <a href="https://themes.gohugo.io/hugo-notepadium/">https://themes.gohugo.io/hugo-notepadium/</a></p>
+<p>在 <code>myblog</code> 目录下，输入 git 命令,</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git submodule add https://github.com/cntrump/hugo-notepadium.git themes/hugo-notepadium
+</code></pre></div><blockquote>
+<p>git submodule add &lt;仓库地址&gt; &lt;本地路径&gt; ：Git Submodule 允许一个 git 仓库，作为另一个 git 仓库的子目录</p>
+</blockquote>
+<p>以后更新主题可以使用命令</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git submodule update --remote --merge
+</code></pre></div><p>因为主题中配置文件更易用，所以将主题目录中 <code>exampleSite</code> 的 <code>config.toml</code> 复制到 <code>myblog</code> 的目录下进行配置</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv config.toml config.toml.old
+mv themes/hugo-notepadium/exampleSite/config.toml config.toml
+</code></pre></div><p>具体配置请参考每个主题下的介绍内容或者<a href="https://www.baidu.com/s?ie=utf-8&amp;f=3&amp;rsv_bp=1&amp;rsv_idx=1&amp;tn=baidu&amp;wd=hugo%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6&amp;fenlei=256&amp;rsv_pq=f5192e0f000cf9fe&amp;rsv_t=25f0gQhKS91drcQT4D%2BGMV1YZbAxF6mz1jJJYvIldwLbvEV1C1MKcnKUCNM&amp;rqlang=cn&amp;rsv_dl=ts_1&amp;rsv_enter=1&amp;rsv_sug3=12&amp;rsv_sug1=9&amp;rsv_sug7=101&amp;rsv_sug2=1&amp;rsv_btype=i&amp;prefixsug=hugo%2520peizhi&amp;rsp=1&amp;inputT=4189&amp;rsv_sug4=5196">去搜</a></p>
+<h3 id="创建一篇文章">创建一篇文章<a href="#创建一篇文章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo new post/firstblog.md
+</code></pre></div><p>则会在<code>content/</code>目录内生成一个<code>post</code>文件夹，该文件夹就是用来存储你所创建编写的markdown文档</p>
+<h3 id="生成博客">生成博客<a href="#生成博客" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><blockquote>
+<p>server 建立服务器   -D 生成静态页面文件（包括标记为草稿的内容）</p>
+</blockquote>
+<p>输入后访问<a href="http://localhost:1313">http://localhost:1313</a> 即可在本地看到生成博客的页面效果</p>
+<h3 id="推送到-github上以下很多内容摘抄自berlin的博客">推送到 Github上（以下很多内容摘抄自<strong>Berlin</strong>的博客）<a href="#推送到-github上以下很多内容摘抄自berlin的博客" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>这里主要说推送到个人主页的方式</p>
+<p>把 <code>public/</code> 目录添加为 <code>submodule</code></p>
+<pre><code>git init git submodule add git@github.com:XXX/xxx.github.io public
+</code></pre><p>添加文件添加 <code>.gitignore</code> 文件，文件中写 <code>public/</code>，在同步到 myhugo 时会忽略 <code>public</code> 文件夹</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vi .gitignore
+public/
+</code></pre></div><p>:wq 保存退出</p>
+<p>将静态页上传到 <code>用户名.github.io</code> 的工作可以借助一个 <code>deploy.sh</code> 脚本来完成</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nb">echo</span> -e <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+
+<span class="c1"># Build the project.</span>
+hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span class="c1"># Go To Public folder</span>
+<span class="nb">cd</span> public
+<span class="c1"># Add changes to git.</span>
+git add .
+
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos.</span>
+git push origin master
+
+<span class="c1"># Come Back up to the Project Root</span>
+<span class="nb">cd</span> ..
+</code></pre></div><p>把以上命令保存为 .sh 文件，然后再运行以下命令,修改 <code>deploy.sh</code> 的权限</p>
+<pre><code>chmod +x deploy.sh
+</code></pre><p>运行以下命令完成 <code>push</code> 整个博客的操作</p>
+<pre><code>./deploy.sh &quot;Your optional commit message&quot;
+</code></pre><p>然后把 <code>myblog</code> 里的内容同步到 <code>GitHub</code> 上。同时要在 <code>data</code>、<code>layouts</code>、<code>static</code> 里面添加一个 <code>.gitkeep</code> 文件，以保持目录结构。记住一定要删掉你的主题目录里面的 <code>.git</code> 文件夹</p>
+<pre><code>git remote add origin git@github.com:github_user_name/your_repository.git    // your_repository 即你存放你的博客源文件的仓库
+git pull origin master
+git add .
+git commit -m &quot;the message you want to write&quot;
+git push -u origin master    // 第二次 push 可以不用加 -u
+</code></pre><p>到这里就大功告成了，如果你要在另一台电脑上继续写博客，只要把 <code>myhugo</code>克隆下来，然后把里面“看得见”的东西拷贝到一个新的文件夹(即除了 <code>.git</code> 、<code>.gitmodule</code> 等)，然后再重复刚才创建 git 子模块的那些步骤，当然你要准备 Hugo 环境。如果你想获取你的主题的最新更新，则在你的主题根目录下运行如下命令：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init
+git remote add origin https://github.com/author_name/your_theme_repo_name.git
+git pull    // or git pull origin master
+</code></pre></div><h2 id="参考资料">参考资料<a href="#参考资料" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><a href="https://fengberlin.github.io/post/use-hugo-to-build-blog/">使用Hugo搭建个人博客</a>，by Berlin</p>
+<p><a href="https://gohugo.io/">HUGO官网</a></p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://xym0602.github.io/tags/untagged">untagged</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-04-19 21:23 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="https://xym0602.github.io/posts/the-figure-shortcode/">
+				<span class="post-nav-label">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>The &#34;figure&#34; Shortcode</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="https://xym0602.github.io/">Melo</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://xym0602.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://xym0602.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>
