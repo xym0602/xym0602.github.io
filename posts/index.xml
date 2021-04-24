@@ -15,9 +15,8 @@
 			<pubDate>Mon, 19 Apr 2021 22:34:33 +0800</pubDate>
 			
 			<guid>https://xn--4gq986klnp.cn/posts/second/</guid>
-			<description>xiwang zheci keyi ceshi</description>
-			<content type="html"><![CDATA[<p>xiwang zheci keyi
-ceshi</p>
+			<description>xiwang zheci keyi</description>
+			<content type="html"><![CDATA[<p>xiwang zheci keyi</p>
 ]]></content>
 		</item>
 		
@@ -71,8 +70,8 @@ ceshi</p>
 <p>首先安装 git</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install git -y
 </code></pre></div><p>配置 Github 用户信息</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git config –global user.name “username”    <span class="c1"># username填写Github用户名</span>
-git config –global user.email “user@useremail.com”    <span class="c1"># useremail填写Github用户名关联的邮箱地址</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git config –-global user.name username    <span class="c1"># username填写Github用户名</span>
+git config –-global user.email user@useremail.com    <span class="c1"># useremail填写Github用户名关联的邮箱地址</span>
 </code></pre></div><p>生成 <code>ssh key</code> 关联 Github</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -C “your_email@youremail.com” <span class="c1">#youremail填写Github用户名关联的邮箱地址</span>
 </code></pre></div><p>三下回车后，会在根目录生成一个<code>.ssh</code>的文件夹，</p>
@@ -130,8 +129,12 @@ mv themes/hugo-notepadium/exampleSite/config.toml config.toml
 <p>首先，需要把 <code>public/</code> 目录删除</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf public/
 </code></pre></div><p>把 <code>public/</code> 目录添加为 <code>submodule</code></p>
-<pre><code>git init git submodule add git@github.com:XXX/xxx.github.io public
-</code></pre><p>添加文件添加 <code>.gitignore</code> 文件，文件中写 <code>public/</code>，在同步到 myhugo 时会忽略 <code>public</code> 文件夹</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init git submodule add git@github.com:XXX/xxx.github.io public
+</code></pre></div><blockquote>
+<p>此处有个坑就是本机 git 默认分支名是 master，而 Github 中默认分支名已改成了main，因此需要把本地分支名称改为main</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git branch -m main
+</code></pre></div><p>添加文件添加 <code>.gitignore</code> 文件，文件中写 <code>public/</code>，在同步到 myhugo 时会忽略 <code>public</code> 文件夹</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vi .gitignore
 public/
 </code></pre></div><p>:wq 保存退出</p>
@@ -156,7 +159,7 @@ git add .
 git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
 
 <span class="c1"># Push source and build repos.</span>
-git push origin master
+git push origin main
 
 <span class="c1"># Come Back up to the Project Root</span>
 <span class="nb">cd</span> ..
@@ -165,15 +168,15 @@ git push origin master
 </code></pre><p>运行以下命令完成 <code>push</code> 整个博客的操作</p>
 <pre><code>./deploy.sh &quot;Your optional commit message&quot;
 </code></pre><p>然后把 <code>myblog</code> 里的内容同步到 <code>GitHub</code> 上。同时要在 <code>data</code>、<code>layouts</code>、<code>static</code> 里面添加一个 <code>.gitkeep</code> 文件，以保持目录结构。记住一定要删掉你的主题目录里面的 <code>.git</code> 文件夹</p>
-<pre><code>git remote add origin git@github.com:github_user_name/your_repository.git    #  your_repository 即你存放你的博客源文件的仓库
-git pull origin master
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git remote add origin git@github.com:github_user_name/your_repository.git    <span class="c1">#  your_repository 即你存放你的博客源文件的仓库</span>
+git pull origin main
 git add .
-git commit -m &quot;the message you want to write&quot;
-git push -u origin master    # 第二次 push 可以不用加 -u
-</code></pre><p>到这里就大功告成了，如果你要在另一台电脑上继续写博客，只要把 <code>myhugo</code>克隆下来，然后把里面“看得见”的东西拷贝到一个新的文件夹(即除了 <code>.git</code> 、<code>.gitmodule</code> 等)，然后再重复刚才创建 git 子模块的那些步骤，当然你要准备 Hugo 环境。如果你想获取你的主题的最新更新，则在你的主题根目录下运行如下命令：</p>
+git commit -m <span class="s2">&#34;the message you want to write&#34;</span>
+git push -u origin main    <span class="c1"># 第二次 push 可以不用加 -u</span>
+</code></pre></div><p>到这里就大功告成了，如果你要在另一台电脑上继续写博客，只要把 <code>myhugo</code>克隆下来，然后把里面“看得见”的东西拷贝到一个新的文件夹(即除了 <code>.git</code> 、<code>.gitmodule</code> 等)，然后再重复刚才创建 git 子模块的那些步骤，当然你要准备 Hugo 环境。如果你想获取你的主题的最新更新，则在你的主题根目录下运行如下命令：</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init
 git remote add origin https://github.com/author_name/your_theme_repo_name.git
-git pull    <span class="c1"># or git pull origin master</span>
+git pull    <span class="c1"># or git pull origin main</span>
 </code></pre></div><h2 id="参考资料">参考资料</h2>
 <p><a href="https://fengberlin.github.io/post/use-hugo-to-build-blog/">使用Hugo搭建个人博客</a>，by Berlin</p>
 <p><a href="https://gohugo.io/">HUGO官网</a></p>
