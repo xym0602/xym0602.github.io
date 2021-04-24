@@ -209,7 +209,7 @@ git push origin main
 <pre><code>chmod +x deploy.sh
 </code></pre><p>运行以下命令完成 <code>push</code> 整个博客的操作</p>
 <pre><code>./deploy.sh &quot;Your optional commit message&quot;
-</code></pre><p>然后把 <code>myblog</code> 里的内容同步到 <code>GitHub</code> 上。同时要在 <code>data</code>、<code>layouts</code>、<code>static</code> 里面添加一个 <code>.gitkeep</code> 文件，以保持目录结构。记住一定要删掉你的主题目录里面的 <code>.git</code> 文件夹</p>
+</code></pre><p>然后把 <code>myblog</code> 里的内容同步到 GitHub 上。同时要在 <code>data</code>、<code>layouts</code>、<code>static</code> 里面添加一个 <code>.gitkeep</code> 文件，以保持目录结构。记住一定要删掉你的主题目录里面的 <code>.git</code> 文件夹</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git remote add origin git@github.com:github_user_name/your_repository.git    <span class="c1">#  your_repository 即你存放你的博客源文件的仓库</span>
 git pull origin main
 git add .
