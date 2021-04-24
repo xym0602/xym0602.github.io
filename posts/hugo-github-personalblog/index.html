@@ -10,7 +10,7 @@
 <meta itemprop="name" content="Hugo&#43;Github Pages 搭建个人博客手记萌新向">
 <meta itemprop="description" content="0. 前言 记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己"><meta itemprop="datePublished" content="2021-04-19T21:23:20&#43;08:00" />
 <meta itemprop="dateModified" content="2021-04-19T21:23:20&#43;08:00" />
-<meta itemprop="wordCount" content="2622">
+<meta itemprop="wordCount" content="2642">
 <meta itemprop="keywords" content="hugo,github,blog," /><meta property="og:title" content="Hugo&#43;Github Pages 搭建个人博客手记萌新向" />
 <meta property="og:description" content="0. 前言 记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己" />
 <meta property="og:type" content="article" />
@@ -171,7 +171,7 @@ mv themes/hugo-notepadium/exampleSite/config.toml config.toml
 <p>首先，需要把 <code>public/</code> 目录删除</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf public/
 </code></pre></div><p>把 <code>public/</code> 目录添加为 <code>submodule</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init git submodule add git@github.com:XXX/xxx.github.io public
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init git submodule add git@github.com:XXX/xxx.github.io public <span class="c1"># xxx是Github的username</span>
 </code></pre></div><blockquote>
 <p>此处有个坑就是本机 git 默认分支名是 master，而 Github 中默认分支名已改成了main，因此需要把本地分支名称改为main</p>
 </blockquote>

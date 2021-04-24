@@ -129,7 +129,7 @@ mv themes/hugo-notepadium/exampleSite/config.toml config.toml
 <p>首先，需要把 <code>public/</code> 目录删除</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf public/
 </code></pre></div><p>把 <code>public/</code> 目录添加为 <code>submodule</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init git submodule add git@github.com:XXX/xxx.github.io public
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init git submodule add git@github.com:XXX/xxx.github.io public <span class="c1"># xxx是Github的username</span>
 </code></pre></div><blockquote>
 <p>此处有个坑就是本机 git 默认分支名是 master，而 Github 中默认分支名已改成了main，因此需要把本地分支名称改为main</p>
 </blockquote>
