@@ -6,17 +6,24 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-CN</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Mon, 19 Apr 2021 22:34:33 +0800</lastBuildDate>
+		<lastBuildDate>Mon, 26 Apr 2021 17:31:02 +0800</lastBuildDate>
 		<atom:link href="https://xn--4gq986klnp.cn/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
-			<title>Second</title>
-			<link>https://xn--4gq986klnp.cn/posts/second/</link>
-			<pubDate>Mon, 19 Apr 2021 22:34:33 +0800</pubDate>
+			<title>利用 Cloud Studio 云端搭建 Hugo 博客</title>
+			<link>https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/</link>
+			<pubDate>Mon, 26 Apr 2021 17:31:02 +0800</pubDate>
 			
-			<guid>https://xn--4gq986klnp.cn/posts/second/</guid>
-			<description>xiwang zheci keyi</description>
-			<content type="html"><![CDATA[<p>xiwang zheci keyi</p>
+			<guid>https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/</guid>
+			<description>需求 之前在 Linux 上部署了 Hugo 的博客，发现我需要在不同设备上都安装 Hugo，而且是在不同的环境下，就显得很麻烦，即便可以通过 Github 同步博客的源文件，但还</description>
+			<content type="html"><![CDATA[<h3 id="需求">需求</h3>
+<p>之前在 Linux 上部署了 Hugo 的博客，发现我需要在不同设备上都安装 Hugo，而且是在不同的环境下，就显得很麻烦，即便可以通过 Github 同步博客的源文件，但还是感觉麻烦，用一台服务器的话又闲贵，所以想到了下面的方法</p>
+<h3 id="想法">想法</h3>
+<p><a href="https://coding.net/">Coding</a> 的 Cloud Studio 具体就不介绍了，去搜把，就是在浏览器运行 VS Code ，可以编写、调试代码，内置 Linux 环境终端，刚好可以利用这个功能来安装 Hugo 实现在线撰写并部署，类似于一台云主机</p>
+<h3 id="思路">思路</h3>
+<p>注册Coding，进入到个人控制面板，在左侧选择 <code>Cloud Studio</code> 进入到在线 IDE 的界面，新建一个<code>工作空间</code>，运行环境选择<code>内置环境</code>，后面需要的环境按需求选择，我选的就是 Ubuntu 18.04，确认后就进入到在线的 IDE 界面了，上方菜单选择<code>终端</code>-&gt;<code>新终端</code>，接下来的操作就参考上一篇内容<a href="https://xn--4gq986klnp.cn/posts/hugo-github-personalblog/">《Hugo+Github Pages 搭建个人博客手记萌新向》</a>像新机器一样操作就好了</p>
+<h3 id="结语">结语</h3>
+<p>Cloud Studio 对于开发者来说确实是个不错的工具，对于不会开发的我也有其利用价值，它的功能相当于免费获得了一台云主机，不再受地点，设备所约束，源文件也保存在远程的服务器上，内置在线版 VS Code 可以安装 Markdown 插件使写作更加便捷，虽然每天只有4小时的可用时间，但对于我来说已经是足够用了，感谢技术</p>
 ]]></content>
 		</item>
 		

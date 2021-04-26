@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 19 Apr 2021 22:34:33 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 17:31:02 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test</title>
-      <link>https://xn--4gq986klnp.cn/tags/test/</link>
-      <pubDate>Mon, 19 Apr 2021 22:34:33 +0800</pubDate>
+      <title>cloud studio</title>
+      <link>https://xn--4gq986klnp.cn/tags/cloud-studio/</link>
+      <pubDate>Mon, 26 Apr 2021 17:31:02 +0800</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/tags/test/</guid>
+      <guid>https://xn--4gq986klnp.cn/tags/cloud-studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://xn--4gq986klnp.cn/tags/hugo/</link>
+      <pubDate>Mon, 26 Apr 2021 17:31:02 +0800</pubDate>
+      
+      <guid>https://xn--4gq986klnp.cn/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -32,15 +41,6 @@
       <pubDate>Mon, 19 Apr 2021 21:23:20 +0800</pubDate>
       
       <guid>https://xn--4gq986klnp.cn/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://xn--4gq986klnp.cn/tags/hugo/</link>
-      <pubDate>Mon, 19 Apr 2021 21:23:20 +0800</pubDate>
-      
-      <guid>https://xn--4gq986klnp.cn/tags/hugo/</guid>
       <description></description>
     </item>
     

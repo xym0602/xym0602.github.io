@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 19 Apr 2021 22:34:33 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 17:31:02 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用 Cloud Studio 云端搭建 Hugo 博客</title>
+      <link>https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/</link>
+      <pubDate>Mon, 26 Apr 2021 17:31:02 +0800</pubDate>
+      
+      <guid>https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/</guid>
+      <description>需求 之前在 Linux 上部署了 Hugo 的博客，发现我需要在不同设备上都安装 Hugo，而且是在不同的环境下，就显得很麻烦，即便可以通过 Github 同步博客的源文件，但还</description>
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>https://xn--4gq986klnp.cn/about-me/</link>
@@ -15,15 +24,6 @@
       
       <guid>https://xn--4gq986klnp.cn/about-me/</guid>
       <description>关于我 简介</description>
-    </item>
-    
-    <item>
-      <title>Second</title>
-      <link>https://xn--4gq986klnp.cn/posts/second/</link>
-      <pubDate>Mon, 19 Apr 2021 22:34:33 +0800</pubDate>
-      
-      <guid>https://xn--4gq986klnp.cn/posts/second/</guid>
-      <description>xiwang zheci keyi</description>
     </item>
     
     <item>
