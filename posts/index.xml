@@ -6,8 +6,41 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-CN</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Mon, 26 Apr 2021 17:31:02 +0800</lastBuildDate>
+		<lastBuildDate>Sat, 04 Sep 2021 12:44:00 +0800</lastBuildDate>
 		<atom:link href="https://xn--4gq986klnp.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题</title>
+			<link>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</link>
+			<pubDate>Sat, 04 Sep 2021 12:44:00 +0800</pubDate>
+			
+			<guid>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</guid>
+			<description>0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何</description>
+			<content type="html"><![CDATA[<h2 id="0-前言">0. 前言</h2>
+<p>对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何解决呢？</p>
+<p><img src="ues-gooreplacer-to-display-recaptcha-1.png" alt="alt Gooreplacer" title="Gooreplacer预览"></p>
+<h2 id="1-下载及安装">1. 下载及安装</h2>
+<h3 id="方法一插件商店安装">方法一：插件商店安装</h3>
+<p>不多赘述，Firefox 浏览器、EDGE 浏览器可直接到扩展商店下载安装，Chrome自己想办法进应用商店</p>
+<h3 id="方法二扩展包文件下载安装">方法二：扩展包文件下载安装</h3>
+<p><a href="https://github.com/jiacai2050/gooreplacer/releases">Github下载链接</a></p>
+<p>下载好 zip 文件后，本地解压。之后在 <code>chrome://extensions/</code> 选中开发者模式，选择「加载已解压的扩展程序」即可。</p>
+<h2 id="2-设置规则加载-recaptcha">2. 设置规则加载 reCAPTCHA</h2>
+<p>点击添加按钮，填入信息，保存提交：
+匹配模式：</p>
+<pre><code>www.google.com/recaptcha
+</code></pre><p>目标地址：</p>
+<pre><code>recaptcha.net/recaptcha
+</code></pre><h2 id="3-拓展">3. 拓展</h2>
+<p>Gooreplacer 是一个用来重定向/屏蔽 URL 的浏览器插件，我们把国内无法访问的 <code>www.google.com/recaptcha</code> 重定向为国内能够访问的 <code>recaptcha.net/recaptcha</code> 使得验证码可以加载。同理，可以用 Gooreplacer 重定向谷歌资源如字体、API等提高网页访问速度。具体使用方法请参考作者的 Github 学习更多。</p>
+<blockquote>
+<p><a href="https://github.com/jiacai2050/gooreplacer">作者jiacai2050</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/jiacai2050/gooreplacer/blob/master/doc/guides.md">自动跳转知乎链接、放运营商劫持</a></p>
+</blockquote>
+]]></content>
+		</item>
 		
 		<item>
 			<title>利用 Cloud Studio 云端搭建 Hugo 博客</title>
@@ -46,7 +79,6 @@
 <p>原理：利用工具将写作内容（Markdown）生成 HTML 静态页，将静态页上传至 Github，利用 Github Pages 的页面链接进行访问</p>
 <h3 id="markdown">Markdown</h3>
 <p>是一种轻量级标记语言,它允许人们使用易读易写的纯文本格式编写文档，由于 Markdown 的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。Markdown 的优势是可以利用一些简单的语法实现排版功能，没有那么多排版、字体的设置，简介易用。弄这些的人基本应该会懂把，懂洞东懂，不懂<a href="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=1&amp;tn=baidu&amp;wd=markdown&amp;fenlei=256&amp;rsv_pq=dd688735000c19e5&amp;rsv_t=2df9kErCKYlOFqkZeoc6GLt4RRdD%2BTOq151y9yITY%2Bzy04gDNpDx8sx51Vs&amp;rqlang=cn&amp;rsv_enter=1&amp;rsv_dl=tb&amp;rsv_sug3=7&amp;rsv_sug1=3&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;rsv_btype=i&amp;inputT=2619&amp;rsv_sug4=2619&amp;rsv_sug=2">去搜</a>。</p>
-<p>Markdown 语法学习</p>
 <h3 id="静态页博客生成工具">静态页博客生成工具</h3>
 <p>Hugo、Hexo、Jekyll、Gridea 是我所了解到比较常用的工具，当然，可能还有一些更热门更好用的工具只是我不知道而已</p>
 <p>我只用过 Hexo 和 Hugo，之前用的是 Hexo，这次搭建用的是 Hugo，简要总结一下我对这俩工具的个人感受：</p>
@@ -184,7 +216,7 @@ git push -u origin main    <span class="c1"># 第二次 push 可以不用加 -u<
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git init
 git remote add origin https://github.com/author_name/your_theme_repo_name.git
 git pull    <span class="c1"># or git pull origin main</span>
-</code></pre></div><h2 id="参考资料">参考资料</h2>
+</code></pre></div><h2 id="3-参考资料">3. 参考资料</h2>
 <p><a href="https://fengberlin.github.io/post/use-hugo-to-build-blog/">使用Hugo搭建个人博客</a>，by Berlin</p>
 <p><a href="https://gohugo.io/">HUGO官网</a></p>
 ]]></content>
