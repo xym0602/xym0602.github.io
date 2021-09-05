@@ -18,7 +18,7 @@
 			<description>0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何</description>
 			<content type="html"><![CDATA[<h2 id="0-前言">0. 前言</h2>
 <p>对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何解决呢？</p>
-<p><img src="ues-gooreplacer-to-display-recaptcha-1.png" alt="alt Gooreplacer" title="Gooreplacer预览"></p>
+<p><img src="/image/ues-gooreplacer-to-display-recaptcha-1.png" alt="alt Gooreplacer" title="Gooreplacer预览"></p>
 <h2 id="1-下载及安装">1. 下载及安装</h2>
 <h3 id="方法一插件商店安装">方法一：插件商店安装</h3>
 <p>不多赘述，Firefox 浏览器、EDGE 浏览器可直接到扩展商店下载安装，Chrome 自己想办法进应用商店</p>
