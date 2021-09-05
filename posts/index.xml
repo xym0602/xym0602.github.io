@@ -26,8 +26,8 @@
 <p><a href="https://github.com/jiacai2050/gooreplacer/releases">Github下载链接</a></p>
 <p>下载好 zip 文件后，本地解压。之后在 <code>chrome://extensions/</code> 选中开发者模式，选择「加载已解压的扩展程序」即可。</p>
 <h2 id="2-设置规则加载-recaptcha">2. 设置规则加载 reCAPTCHA</h2>
-<p>点击添加按钮，填入信息，保存提交：
-匹配模式：</p>
+<p>点击添加按钮，填入信息，保存提交：</p>
+<p>匹配模式：</p>
 <pre><code>www.google.com/recaptcha
 </code></pre><p>目标地址：</p>
 <pre><code>recaptcha.net/recaptcha
