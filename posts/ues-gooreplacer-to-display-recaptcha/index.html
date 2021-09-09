@@ -10,7 +10,7 @@
 <meta itemprop="name" content="利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题">
 <meta itemprop="description" content="0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何"><meta itemprop="datePublished" content="2021-09-04T12:44:00&#43;08:00" />
 <meta itemprop="dateModified" content="2021-09-04T12:44:00&#43;08:00" />
-<meta itemprop="wordCount" content="376">
+<meta itemprop="wordCount" content="382">
 <meta itemprop="keywords" content="reCAPTCHA,gooreplacer," /><meta property="og:title" content="利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题" />
 <meta property="og:description" content="0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何" />
 <meta property="og:type" content="article" />
@@ -71,7 +71,8 @@
 			<div class="content">
 				<h2 id="0-前言">0. 前言<a href="#0-前言" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何解决呢？</p>
-<p><img src="/image/ues-gooreplacer-to-display-recaptcha-1.png" alt="alt Gooreplacer" title="Gooreplacer预览"></p>
+<p>Gooreplacer 是一个用来重定向/屏蔽 URL 的浏览器插件，我们把国内无法访问的 <code>www.google.com/recaptcha</code> 重定向为国内能够访问的 <code>recaptcha.net/recaptcha</code> 使得验证码可以加载。</p>
+<p><img src="/image/ues-gooreplacer-to-display-recaptcha/gooreplacer-preview.png" alt="alt Gooreplacer" title="Gooreplacer 预览"></p>
 <h2 id="1-下载及安装">1. 下载及安装<a href="#1-下载及安装" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <h3 id="方法一插件商店安装">方法一：插件商店安装<a href="#方法一插件商店安装" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 <p>不多赘述，Firefox 浏览器、EDGE 浏览器可直接到扩展商店下载安装，Chrome 自己想办法进应用商店</p>
@@ -85,12 +86,12 @@
 </code></pre><p>目标地址：</p>
 <pre><code>recaptcha.net/recaptcha
 </code></pre><h2 id="3-拓展">3. 拓展<a href="#3-拓展" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>Gooreplacer 是一个用来重定向/屏蔽 URL 的浏览器插件，我们把国内无法访问的 <code>www.google.com/recaptcha</code> 重定向为国内能够访问的 <code>recaptcha.net/recaptcha</code> 使得验证码可以加载。同理，可以用 Gooreplacer 重定向谷歌资源如字体、API等提高网页访问速度。具体使用方法请参考作者的 Github 学习更多。</p>
+<p>知道了 Gooreplacer 的作用，可以用它来重定向谷歌资源如字体、API等提高网页访问速度。具体使用方法请参考作者的 Github 学习更多。</p>
 <blockquote>
 <p><a href="https://github.com/jiacai2050/gooreplacer">作者jiacai2050</a></p>
 </blockquote>
 <blockquote>
-<p><a href="https://github.com/jiacai2050/gooreplacer/blob/master/doc/guides.md">自动跳转知乎链接、放运营商劫持</a></p>
+<p><a href="https://github.com/jiacai2050/gooreplacer/blob/master/doc/guides.md">自动跳转知乎链接、防运营商劫持</a></p>
 </blockquote>
 
 			</div>
@@ -99,11 +100,14 @@
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://xn--4gq986klnp.cn/tags/recaptcha">reCAPTCHA</a></span><span class="tag"><a href="https://xn--4gq986klnp.cn/tags/gooreplacer">gooreplacer</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>376 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>382 字</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-09-04 12:44 &#43;0800</p>
 			</footer>
 		</article>
 		<div class="post-nav thin">
+			<a class="next-post" href="https://xn--4gq986klnp.cn/posts/kegin-t201p/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>Kegin T201p</span>
+			</a>
 			<a class="prev-post" href="https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/">
 				<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>利用 Cloud Studio 云端搭建 Hugo 博客</span>
 			</a>

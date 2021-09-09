@@ -6,8 +6,19 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-CN</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Sat, 04 Sep 2021 12:44:00 +0800</lastBuildDate>
+		<lastBuildDate>Thu, 09 Sep 2021 18:27:49 +0800</lastBuildDate>
 		<atom:link href="https://xn--4gq986klnp.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Kegin T201p</title>
+			<link>https://xn--4gq986klnp.cn/posts/kegin-t201p/</link>
+			<pubDate>Thu, 09 Sep 2021 18:27:49 +0800</pubDate>
+			
+			<guid>https://xn--4gq986klnp.cn/posts/kegin-t201p/</guid>
+			<description></description>
+			<content type="html"><![CDATA[<!-- raw HTML omitted -->
+]]></content>
+		</item>
 		
 		<item>
 			<title>利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题</title>
@@ -18,7 +29,8 @@
 			<description>0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何</description>
 			<content type="html"><![CDATA[<h2 id="0-前言">0. 前言</h2>
 <p>对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何解决呢？</p>
-<p><img src="/image/ues-gooreplacer-to-display-recaptcha-1.png" alt="alt Gooreplacer" title="Gooreplacer预览"></p>
+<p>Gooreplacer 是一个用来重定向/屏蔽 URL 的浏览器插件，我们把国内无法访问的 <code>www.google.com/recaptcha</code> 重定向为国内能够访问的 <code>recaptcha.net/recaptcha</code> 使得验证码可以加载。</p>
+<p><img src="/image/ues-gooreplacer-to-display-recaptcha/gooreplacer-preview.png" alt="alt Gooreplacer" title="Gooreplacer 预览"></p>
 <h2 id="1-下载及安装">1. 下载及安装</h2>
 <h3 id="方法一插件商店安装">方法一：插件商店安装</h3>
 <p>不多赘述，Firefox 浏览器、EDGE 浏览器可直接到扩展商店下载安装，Chrome 自己想办法进应用商店</p>
@@ -32,12 +44,12 @@
 </code></pre><p>目标地址：</p>
 <pre><code>recaptcha.net/recaptcha
 </code></pre><h2 id="3-拓展">3. 拓展</h2>
-<p>Gooreplacer 是一个用来重定向/屏蔽 URL 的浏览器插件，我们把国内无法访问的 <code>www.google.com/recaptcha</code> 重定向为国内能够访问的 <code>recaptcha.net/recaptcha</code> 使得验证码可以加载。同理，可以用 Gooreplacer 重定向谷歌资源如字体、API等提高网页访问速度。具体使用方法请参考作者的 Github 学习更多。</p>
+<p>知道了 Gooreplacer 的作用，可以用它来重定向谷歌资源如字体、API等提高网页访问速度。具体使用方法请参考作者的 Github 学习更多。</p>
 <blockquote>
 <p><a href="https://github.com/jiacai2050/gooreplacer">作者jiacai2050</a></p>
 </blockquote>
 <blockquote>
-<p><a href="https://github.com/jiacai2050/gooreplacer/blob/master/doc/guides.md">自动跳转知乎链接、放运营商劫持</a></p>
+<p><a href="https://github.com/jiacai2050/gooreplacer/blob/master/doc/guides.md">自动跳转知乎链接、防运营商劫持</a></p>
 </blockquote>
 ]]></content>
 		</item>

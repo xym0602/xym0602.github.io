@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 04 Sep 2021 12:44:00 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 18:27:49 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kegin T201p</title>
+      <link>https://xn--4gq986klnp.cn/posts/kegin-t201p/</link>
+      <pubDate>Thu, 09 Sep 2021 18:27:49 +0800</pubDate>
+      
+      <guid>https://xn--4gq986klnp.cn/posts/kegin-t201p/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题</title>
       <link>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</link>
