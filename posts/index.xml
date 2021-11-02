@@ -43,7 +43,7 @@
 </code></pre><p>保存并重新部署</p>
 <p>这样，通过访问 /admin 即可进入到管理后台</p>
 <h2 id="3-客户端下载">3. 客户端下载</h2>
-<p>由于官网 <a href="https://www.bitwarden.com">https://www.bitwarden.com</a> 由于某些原因无法访问，建议不要随便在网上搜索下载，而是去官方的 Github 页下载，个人使用较多的是 Chrome 的插件版及安卓 app ，下面贴俩地址，其他的请自行寻找</p>
+<p>由于官网 <a href="https://www.bitwarden.com">https://www.bitwarden.com</a> 由于某些原因无法访问，建议不要随便在网上搜索下载，而是去官方的 Github 页下载，个人使用较多的是 Chrome 的插件版及安卓 app ，下面贴俩地址，其他的请自行寻找。</p>
 <p><a href="https://github.com/bitwarden/browser/releases">浏览器插件</a></p>
 <p><a href="https://github.com/bitwarden/mobile/releases">移动端 app</a></p>
 ]]></content>
