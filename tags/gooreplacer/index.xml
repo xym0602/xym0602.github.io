@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gooreplacer on Melo&#39;s Blog</title>
-    <link>https://xn--4gq986klnp.cn/tags/gooreplacer/</link>
+    <link>https://blog.xn--4gq986klnp.cn/tags/gooreplacer/</link>
     <description>Recent content in gooreplacer on Melo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 04 Sep 2021 12:44:00 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/tags/gooreplacer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Sep 2021 12:44:00 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/tags/gooreplacer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题</title>
-      <link>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</link>
+      <link>https://blog.xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</link>
       <pubDate>Sat, 04 Sep 2021 12:44:00 +0800</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</guid>
       <description>0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何</description>
     </item>
     

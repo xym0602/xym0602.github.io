@@ -2,63 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Melo&#39;s Blog</title>
-    <link>https://xn--4gq986klnp.cn/</link>
+    <link>https://blog.xn--4gq986klnp.cn/</link>
     <description>Recent content on Melo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 09 Sep 2021 18:27:49 +0800</lastBuildDate><atom:link href="https://xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Nov 2021 22:18:39 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>腾讯云部署（几乎）白嫖 Bitwarden</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/bitwarden/</link>
+      <pubDate>Mon, 01 Nov 2021 22:18:39 +0800</pubDate>
+      
+      <guid>https://blog.xn--4gq986klnp.cn/posts/bitwarden/</guid>
+      <description>0. 前言 随着在大大小小各式各样网站注册的账号增多，需要记下的账号密码也特别容易忘记，况且所有网站都用相同的用户名密码特别不安全。这时需要小本本</description>
+    </item>
+    
     <item>
       <title>Kegin T201p</title>
-      <link>https://xn--4gq986klnp.cn/posts/kegin-t201p/</link>
+      <link>https://blog.xn--4gq986klnp.cn/posts/kegin-t201p/</link>
       <pubDate>Thu, 09 Sep 2021 18:27:49 +0800</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/posts/kegin-t201p/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/kegin-t201p/</guid>
       <description>当我发现我想写日记的时候，就总要逼迫自己用特别正式的口吻去表达，这样的思想成为了我记录文字的枷锁，本身这些内容就是写给自己看的，不必那么认真</description>
     </item>
     
     <item>
       <title>利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题</title>
-      <link>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</link>
+      <link>https://blog.xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</link>
       <pubDate>Sat, 04 Sep 2021 12:44:00 +0800</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</guid>
       <description>0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何</description>
     </item>
     
     <item>
       <title>利用 Cloud Studio 云端搭建 Hugo 博客</title>
-      <link>https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/</link>
+      <link>https://blog.xn--4gq986klnp.cn/posts/cloud-studio-hugo/</link>
       <pubDate>Mon, 26 Apr 2021 17:31:02 +0800</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/cloud-studio-hugo/</guid>
       <description>需求 之前在 Linux 上部署了 Hugo 的博客，发现我需要在不同设备上都安装 Hugo，而且是在不同的环境下，就显得很麻烦，即便可以通过 Github 同步博客的源文件，但还</description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>https://xn--4gq986klnp.cn/about-me/</link>
+      <link>https://blog.xn--4gq986klnp.cn/about-me/</link>
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/about-me/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/about-me/</guid>
       <description>关于我 简介</description>
     </item>
     
     <item>
       <title>Hugo&#43;Github Pages 搭建个人博客手记萌新向</title>
-      <link>https://xn--4gq986klnp.cn/posts/hugo-github-personalblog/</link>
+      <link>https://blog.xn--4gq986klnp.cn/posts/hugo-github-personalblog/</link>
       <pubDate>Mon, 19 Apr 2021 21:23:20 +0800</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/posts/hugo-github-personalblog/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/hugo-github-personalblog/</guid>
       <description>0. 前言 记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己</description>
     </item>
     
     <item>
       <title>About Hugo</title>
-      <link>https://xn--4gq986klnp.cn/about-hugo/</link>
+      <link>https://blog.xn--4gq986klnp.cn/about-hugo/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://xn--4gq986klnp.cn/about-hugo/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/about-hugo/</guid>
       <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
 It makes use of a variety of open source projects including:
  https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>

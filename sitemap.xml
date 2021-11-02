@@ -2,55 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xn--4gq986klnp.cn/tags/kegin/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/bitwarden/</loc>
+    <lastmod>2021-11-01T22:18:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/</loc>
+    <lastmod>2021-11-01T22:18:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/</loc>
+    <lastmod>2021-11-01T22:18:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/</loc>
+    <lastmod>2021-11-01T22:18:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
+    <lastmod>2021-11-01T22:18:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/bitwarden/</loc>
+    <lastmod>2021-11-01T22:18:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/kegin/</loc>
     <lastmod>2021-09-09T18:27:49+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/posts/kegin-t201p/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/kegin-t201p/</loc>
     <lastmod>2021-09-09T18:27:49+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/nas/</loc>
     <lastmod>2021-09-09T18:27:49+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/nas/</loc>
-    <lastmod>2021-09-09T18:27:49+08:00</lastmod>
-  </url><url>
-    <loc>https://xn--4gq986klnp.cn/posts/</loc>
-    <lastmod>2021-09-09T18:27:49+08:00</lastmod>
-  </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/</loc>
-    <lastmod>2021-09-09T18:27:49+08:00</lastmod>
-  </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/gooreplacer/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/gooreplacer/</loc>
     <lastmod>2021-09-04T12:44:00+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/recaptcha/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/recaptcha/</loc>
     <lastmod>2021-09-04T12:44:00+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</loc>
     <lastmod>2021-09-04T12:44:00+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/cloud-studio/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/cloud-studio/</loc>
     <lastmod>2021-04-26T17:31:02+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/hugo/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/hugo/</loc>
     <lastmod>2021-04-26T17:31:02+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/posts/cloud-studio-hugo/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/cloud-studio-hugo/</loc>
     <lastmod>2021-04-26T17:31:02+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/about-me/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/about-me/</loc>
     <lastmod>2021-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/blog/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/blog/</loc>
     <lastmod>2021-04-19T21:23:20+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/tags/github/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/github/</loc>
     <lastmod>2021-04-19T21:23:20+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/posts/hugo-github-personalblog/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/hugo-github-personalblog/</loc>
     <lastmod>2021-04-19T21:23:20+08:00</lastmod>
   </url><url>
-    <loc>https://xn--4gq986klnp.cn/about-hugo/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/about-hugo/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
 </urlset>
