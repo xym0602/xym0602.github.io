@@ -6,8 +6,149 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-CN</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Mon, 01 Nov 2021 22:18:39 +0800</lastBuildDate>
+		<lastBuildDate>Wed, 10 Nov 2021 00:59:02 +0800</lastBuildDate>
 		<atom:link href="https://blog.xn--4gq986klnp.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Docker Study Note</title>
+			<link>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</link>
+			<pubDate>Wed, 10 Nov 2021 00:59:02 +0800</pubDate>
+			
+			<guid>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</guid>
+			<description>0. Portainer 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docke</description>
+			<content type="html"><![CDATA[<h2 id="0-portainer">0. Portainer</h2>
+<h3 id="创建-portainer-server-将用于存储其数据库的卷">创建 Portainer Server 将用于存储其数据库的卷：</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker volume create portainer_data
+</code></pre></div><h3 id="下载并安装-portainer-server-容器">下载并安装 Portainer Server 容器：</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 8000:8000 -p 9443:9443 --name portainer <span class="se">\
+</span><span class="se"></span>    --restart<span class="o">=</span>always <span class="se">\
+</span><span class="se"></span>    -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\
+</span><span class="se"></span>    -v portainer_data:/data <span class="se">\
+</span><span class="se"></span>    portainer/portainer-ce:latest
+</code></pre></div><hr>
+<h2 id="1-epic-周免游戏自动领取">1. Epic 周免游戏自动领取</h2>
+<p>首先创建 docker-compose.yml文 件，内容如下:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">epic-a</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">luminoleon/epicgames-claimer</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">epic-a</span><span class="w">
+</span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">TZ=Asia/Shanghai</span><span class="w">
+</span><span class="w">      </span>- <span class="l">AUTO_UPDATE=true</span><span class="w">
+</span><span class="w">      </span>- <span class="l">EMAIL=邮箱</span><span class="w">
+</span><span class="w">      </span>- <span class="l">PASSWORD=密码</span><span class="w">
+</span><span class="w">  </span><span class="nt">epic-b</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">luminoleon/epicgames-claimer</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">epic-b</span><span class="w">
+</span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">TZ=Asia/Shanghai</span><span class="w">
+</span><span class="w">      </span>- <span class="l">AUTO_UPDATE=true</span><span class="w">
+</span><span class="w">      </span>- <span class="l">EMAIL=另一个邮箱</span><span class="w">
+</span><span class="w">      </span>- <span class="l">PASSWORD=另一个密码</span><span class="w">
+</span></code></pre></div><p>然后执行命令:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker-compose up -d
+</code></pre></div><hr>
+<h2 id="2-vaultwarden原-bitwarden">2. Vaultwarden（原 Bitwarden）</h2>
+<h3 id="映射文件目录创建">映射文件目录创建</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">mkdir -p /usr/local/apps/vaultwarden/data  /usr/local/apps/nginx/conf.d /usr/local/apps/nginx/ssl
+touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.conf
+</code></pre></div><h3 id="创建-docker-compose-文件">创建 Docker compose 文件</h3>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.3&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">nginx</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx:stable</span><span class="w">
+</span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/usr/local/apps/nginx/conf.d:/etc/nginx/conf.d</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/usr/local/apps/nginx/ssl:/etc/ssl</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;59995:443&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w"> </span><span class="nt">vaultwarden</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">vaultwarden/server:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">bitwarden</span><span class="w">
+</span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/usr/local/apps/vaultwarden/data:/data/</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/usr/local/apps/vaultwarden/.env:/.env</span><span class="w"> </span><span class="c">#从.env文件中加载环境变量 </span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><h3 id="修改-vaultwarden-的配置文件-env">修改 Vaultwarden 的配置文件 <code>.env</code></h3>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">SIGNUPS_ALLOWED=</span><span class="kc">false</span> <span class="err">#是否开放注册，个人使用建议否</span>
+<span class="err">ADMIN_TOKEN=</span><span class="mi">123456</span> <span class="err">#自行设置后台管理密码</span>
+</code></pre></div><p>然后执行命令:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker-compose up -d
+</code></pre></div><h3 id="配置-nginx-文件存放在本地映射文件夹下">配置 Nginx 文件，存放在本地映射文件夹下</h3>
+<div class="highlight"><pre class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+  <span class="kn">server_name</span> <span class="s">your.domin</span><span class="p">;</span> <span class="c1">#修改域名
+</span><span class="c1"></span>
+  <span class="kn">ssl_certificate</span>      <span class="s">/etc/ssl/certs/yourkeyname.pem</span><span class="p">;</span>   
+  <span class="kn">ssl_certificate_key</span>  <span class="s">/etc/ssl/certs/yourkeyname.key</span><span class="p">;</span> 
+
+
+  <span class="c1"># Allow large attachments
+</span><span class="c1"></span>  <span class="kn">client_max_body_size</span> <span class="s">128M</span><span class="p">;</span>
+
+  <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+    <span class="c1">#个人修改容器内 Vaultwarden 的ip及端口，不知道规不规范，请指正
+</span><span class="c1"></span>    <span class="kn">proxy_pass</span> <span class="s">http://172.19.0.3:80</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">X-Real-IP</span> <span class="nv">$remote_addr</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-Proto</span> <span class="nv">$scheme</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kn">location</span> <span class="s">/notifications/hub</span> <span class="p">{</span>
+    <span class="c1">#websocket 端口
+</span><span class="c1"></span>    <span class="kn">proxy_pass</span> <span class="s">http://172.19.0.3:3012</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">Upgrade</span> <span class="nv">$http_upgrade</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">Connection</span> <span class="s">&#34;upgrade&#34;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kn">location</span> <span class="s">/notifications/hub/negotiate</span> <span class="p">{</span>
+    <span class="c1">#个人修改容器内 Vaultwarden 的ip及端口，不知道规不规范，请指正
+</span><span class="c1"></span>    <span class="kn">proxy_pass</span> <span class="s">http://172.19.0.3:80</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>重启 Nginx 容器即可生效</p>
+<hr>
+<h3 id="3-heimdall-导航">3. Heimdall 导航</h3>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2.1&#34;</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">heimdall</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">lscr.io/linuxserver/heimdall</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">heimdall</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">PUID=1000</span><span class="w">
+</span><span class="w">      </span>- <span class="l">PGID=1000</span><span class="w">
+</span><span class="w">      </span>- <span class="l">TZ=Europe/London</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">&lt;/path/to/appdata/config&gt;:/config</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="m">80</span><span class="p">:</span><span class="m">80</span><span class="w">
+</span><span class="w">      </span>- <span class="m">443</span><span class="p">:</span><span class="m">443</span><span class="w">
+</span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></code></pre></div><blockquote>
+<p>需要以非 root 用户部署</p>
+</blockquote>
+<hr>
+<h3 id="4-为知笔记-wiz放弃折腾">4. 为知笔记 Wiz（放弃折腾）</h3>
+<blockquote>
+<p>不知道什么原因手机 4G 网络访问不了，并且容器占用资源多，暂时放弃折腾，需要的话先用 Coding 在线编辑器对付用一下，或着有空试一下 Joplin</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run --name wiz --restart<span class="o">=</span>always -it -d -v  ~/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 80:80 -p 9269:9269/udp  wiznote/wizserver
+</code></pre></div><hr>
+]]></content>
+		</item>
 		
 		<item>
 			<title>腾讯云部署（几乎）白嫖 Bitwarden</title>
