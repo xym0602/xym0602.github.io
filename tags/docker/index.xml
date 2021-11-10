@@ -14,7 +14,7 @@
       <pubDate>Wed, 10 Nov 2021 00:59:02 +0800</pubDate>
       
       <guid>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</guid>
-      <description>0. Portainer 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docke</description>
+      <description>0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件</description>
     </item>
     
   </channel>

@@ -8,11 +8,11 @@
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c">
 <meta itemprop="name" content="Docker Study Note">
-<meta itemprop="description" content="0. Portainer 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docke"><meta itemprop="datePublished" content="2021-11-10T00:59:02&#43;08:00" />
+<meta itemprop="description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件"><meta itemprop="datePublished" content="2021-11-10T00:59:02&#43;08:00" />
 <meta itemprop="dateModified" content="2021-11-10T00:59:02&#43;08:00" />
-<meta itemprop="wordCount" content="653">
+<meta itemprop="wordCount" content="642">
 <meta itemprop="keywords" content="docker,bitwarden," /><meta property="og:title" content="Docker Study Note" />
-<meta property="og:description" content="0. Portainer 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docke" />
+<meta property="og:description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xn--4gq986klnp.cn/posts/docker-study-note/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-11-10T00:59:02&#43;08:00" />
@@ -20,7 +20,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker Study Note"/>
-<meta name="twitter:description" content="0. Portainer 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docke"/>
+<meta name="twitter:description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -70,9 +70,9 @@
 			</header>
 			<div class="content">
 				<h2 id="0-portainer">0. Portainer<a href="#0-portainer" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<h3 id="创建-portainer-server-将用于存储其数据库的卷">创建 Portainer Server 将用于存储其数据库的卷：<a href="#创建-portainer-server-将用于存储其数据库的卷" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="a-创建-portainer-server-将用于存储其数据库的卷">a. 创建 Portainer Server 将用于存储其数据库的卷：<a href="#a-创建-portainer-server-将用于存储其数据库的卷" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker volume create portainer_data
-</code></pre></div><h3 id="下载并安装-portainer-server-容器">下载并安装 Portainer Server 容器：<a href="#下载并安装-portainer-server-容器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+</code></pre></div><h3 id="b-下载并安装-portainer-server-容器">b. 下载并安装 Portainer Server 容器：<a href="#b-下载并安装-portainer-server-容器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 8000:8000 -p 9443:9443 --name portainer <span class="se">\
 </span><span class="se"></span>    --restart<span class="o">=</span>always <span class="se">\
 </span><span class="se"></span>    -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\
@@ -80,7 +80,7 @@
 </span><span class="se"></span>    portainer/portainer-ce:latest
 </code></pre></div><hr>
 <h2 id="1-epic-周免游戏自动领取">1. Epic 周免游戏自动领取<a href="#1-epic-周免游戏自动领取" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>首先创建 docker-compose.yml文 件，内容如下:</p>
+<p>首先创建 docker-compose.yml 文件，内容如下:</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
@@ -107,10 +107,10 @@
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker-compose up -d
 </code></pre></div><hr>
 <h2 id="2-vaultwarden原-bitwarden">2. Vaultwarden（原 Bitwarden）<a href="#2-vaultwarden原-bitwarden" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<h3 id="映射文件目录创建">映射文件目录创建<a href="#映射文件目录创建" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">mkdir -p /usr/local/apps/vaultwarden/data  /usr/local/apps/nginx/conf.d /usr/local/apps/nginx/ssl
+<h3 id="a-映射文件目录创建">a. 映射文件目录创建<a href="#a-映射文件目录创建" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir -p /usr/local/apps/vaultwarden/data  /usr/local/apps/nginx/conf.d /usr/local/apps/nginx/ssl
 touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.conf
-</code></pre></div><h3 id="创建-docker-compose-文件">创建 Docker compose 文件<a href="#创建-docker-compose-文件" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+</code></pre></div><h3 id="b-创建-docker-compose-文件">b. 创建 Docker compose 文件<a href="#b-创建-docker-compose-文件" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.3&#39;</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
@@ -133,12 +133,12 @@ touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.co
 </span><span class="w">      </span>- <span class="l">/usr/local/apps/vaultwarden/.env:/.env</span><span class="w"> </span><span class="c">#从.env文件中加载环境变量 </span><span class="w">
 </span><span class="w">
 </span><span class="w">
-</span></code></pre></div><h3 id="修改-vaultwarden-的配置文件-env">修改 Vaultwarden 的配置文件 <code>.env</code><a href="#修改-vaultwarden-的配置文件-env" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">SIGNUPS_ALLOWED=</span><span class="kc">false</span> <span class="err">#是否开放注册，个人使用建议否</span>
-<span class="err">ADMIN_TOKEN=</span><span class="mi">123456</span> <span class="err">#自行设置后台管理密码</span>
+</span></code></pre></div><h3 id="c-修改-vaultwarden-的配置文件-env">c. 修改 Vaultwarden 的配置文件 <code>.env</code><a href="#c-修改-vaultwarden-的配置文件-env" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">SIGNUPS_ALLOWED=</span><span class="kc">false</span>  <span class="err">#</span> <span class="err">是否开放注册，个人使用建议否</span>
+<span class="err">ADMIN_TOKEN=</span><span class="mi">123456</span>  <span class="err">#</span> <span class="err">自行设置后台管理密码</span>
 </code></pre></div><p>然后执行命令:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker-compose up -d
-</code></pre></div><h3 id="配置-nginx-文件存放在本地映射文件夹下">配置 Nginx 文件，存放在本地映射文件夹下<a href="#配置-nginx-文件存放在本地映射文件夹下" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker-compose up -d
+</code></pre></div><h3 id="d-配置-nginx-文件存放在本地映射文件夹下">d. 配置 Nginx 文件，存放在本地映射文件夹下<a href="#d-配置-nginx-文件存放在本地映射文件夹下" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">server</span> <span class="p">{</span>
   <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
   <span class="kn">server_name</span> <span class="s">your.domin</span><span class="p">;</span> <span class="c1">#修改域名
@@ -183,7 +183,7 @@ touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.co
 </span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="l">PUID=1000</span><span class="w">
 </span><span class="w">      </span>- <span class="l">PGID=1000</span><span class="w">
-</span><span class="w">      </span>- <span class="l">TZ=Europe/London</span><span class="w">
+</span><span class="w">      </span>- <span class="l">TZ=Asia/Shanghai</span><span class="w">
 </span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="l">&lt;/path/to/appdata/config&gt;:/config</span><span class="w">
 </span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
@@ -199,15 +199,14 @@ touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.co
 <p>不知道什么原因手机 4G 网络访问不了，并且容器占用资源多，暂时放弃折腾，需要的话先用 Coding 在线编辑器对付用一下，或着有空试一下 Joplin</p>
 </blockquote>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run --name wiz --restart<span class="o">=</span>always -it -d -v  ~/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 80:80 -p 9269:9269/udp  wiznote/wizserver
-</code></pre></div><hr>
-
+</code></pre></div>
 			</div>
 			<hr class="post-end">
 			<footer class="post-info">
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/docker">docker</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/bitwarden">bitwarden</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>653 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>642 字</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-11-10 00:59 &#43;0800</p>
 			</footer>
 		</article>
