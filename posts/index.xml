@@ -10,7 +10,7 @@
 		<atom:link href="https://blog.xn--4gq986klnp.cn/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
-			<title>Docker Study Note</title>
+			<title>个人常用的 Docker 镜像安装记录</title>
 			<link>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</link>
 			<pubDate>Wed, 10 Nov 2021 00:59:02 +0800</pubDate>
 			
@@ -55,7 +55,7 @@
 </code></pre></div><hr>
 <h2 id="2-vaultwarden原-bitwarden">2. Vaultwarden（原 Bitwarden）</h2>
 <h3 id="a-映射文件目录创建">a. 映射文件目录创建</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir -p /usr/local/apps/vaultwarden/data  /usr/local/apps/nginx/conf.d /usr/local/apps/nginx/ssl
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">mkdir -p /usr/local/apps/vaultwarden/data  /usr/local/apps/nginx/conf.d /usr/local/apps/nginx/ssl
 touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.conf
 </code></pre></div><h3 id="b-创建-docker-compose-文件">b. 创建 Docker compose 文件</h3>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.3&#39;</span><span class="w">
@@ -81,10 +81,10 @@ touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.co
 </span><span class="w">
 </span><span class="w">
 </span></code></pre></div><h3 id="c-修改-vaultwarden-的配置文件-env">c. 修改 Vaultwarden 的配置文件 <code>.env</code></h3>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">SIGNUPS_ALLOWED=</span><span class="kc">false</span>  <span class="err">#</span> <span class="err">是否开放注册，个人使用建议否</span>
-<span class="err">ADMIN_TOKEN=</span><span class="mi">123456</span>  <span class="err">#</span> <span class="err">自行设置后台管理密码</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">SIGNUPS_ALLOWED</span><span class="o">=</span><span class="n">false</span>  <span class="c1"># 是否开放注册，个人使用建议否</span>
+<span class="n">ADMIN_TOKEN</span><span class="o">=</span><span class="mi">123456</span>  <span class="c1"># 自行设置后台管理密码</span>
 </code></pre></div><p>然后执行命令:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker-compose up -d
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker-compose up -d
 </code></pre></div><h3 id="d-配置-nginx-文件存放在本地映射文件夹下">d. 配置 Nginx 文件，存放在本地映射文件夹下</h3>
 <div class="highlight"><pre class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">server</span> <span class="p">{</span>
   <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
