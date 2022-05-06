@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 10 Nov 2021 00:59:02 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 16:45:57 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>车云一体及SOA相关知识学习</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/soa-study/</link>
+      <pubDate>Fri, 06 May 2022 16:45:57 +0800</pubDate>
+      
+      <guid>https://blog.xn--4gq986klnp.cn/posts/soa-study/</guid>
+      <description>SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA</description>
+    </item>
+    
     <item>
       <title>个人常用的 Docker 镜像安装记录</title>
       <link>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</link>
@@ -80,15 +89,6 @@
       <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
 It makes use of a variety of open source projects including:
  https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
-    </item>
-    
-    <item>
-      <title>Soa Study</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/soa-study/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.xn--4gq986klnp.cn/posts/soa-study/</guid>
-      <description>SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA</description>
     </item>
     
   </channel>
