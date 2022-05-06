@@ -8,11 +8,11 @@
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c">
 <meta itemprop="name" content="个人常用的 Docker 镜像安装记录">
-<meta itemprop="description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:80 -p 9443:443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件"><meta itemprop="datePublished" content="2021-11-10T00:59:02&#43;08:00" />
+<meta itemprop="description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 9000:9000 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件，内"><meta itemprop="datePublished" content="2021-11-10T00:59:02&#43;08:00" />
 <meta itemprop="dateModified" content="2021-11-10T00:59:02&#43;08:00" />
-<meta itemprop="wordCount" content="642">
+<meta itemprop="wordCount" content="640">
 <meta itemprop="keywords" content="docker,bitwarden," /><meta property="og:title" content="个人常用的 Docker 镜像安装记录" />
-<meta property="og:description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:80 -p 9443:443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件" />
+<meta property="og:description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 9000:9000 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件，内" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xn--4gq986klnp.cn/posts/docker-study-note/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-11-10T00:59:02&#43;08:00" />
@@ -20,7 +20,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="个人常用的 Docker 镜像安装记录"/>
-<meta name="twitter:description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:80 -p 9443:443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件"/>
+<meta name="twitter:description" content="0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 9000:9000 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件，内"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -73,7 +73,7 @@
 <h3 id="a-创建-portainer-server-将用于存储其数据库的卷">a. 创建 Portainer Server 将用于存储其数据库的卷：<a href="#a-创建-portainer-server-将用于存储其数据库的卷" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker volume create portainer_data
 </code></pre></div><h3 id="b-下载并安装-portainer-server-容器">b. 下载并安装 Portainer Server 容器：<a href="#b-下载并安装-portainer-server-容器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 8000:80 -p 9443:443 --name portainer <span class="se">\
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 9000:9000 --name portainer <span class="se">\
 </span><span class="se"></span>    --restart<span class="o">=</span>always <span class="se">\
 </span><span class="se"></span>    -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\
 </span><span class="se"></span>    -v portainer_data:/data <span class="se">\
@@ -206,7 +206,7 @@ touch /usr/local/apps/vaultwarden/.env /usr/local/apps/nginx/conf.d/bitwarden.co
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/docker">docker</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/bitwarden">bitwarden</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>642 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>640 字</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-11-10 00:59 &#43;0800</p>
 			</footer>
 		</article>

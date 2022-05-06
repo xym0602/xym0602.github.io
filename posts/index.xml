@@ -307,12 +307,12 @@
 			<pubDate>Wed, 10 Nov 2021 00:59:02 +0800</pubDate>
 			
 			<guid>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</guid>
-			<description>0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 8000:80 -p 9443:443 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件</description>
+			<description>0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 9000:9000 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件，内</description>
 			<content type="html"><![CDATA[<h2 id="0-portainer">0. Portainer</h2>
 <h3 id="a-创建-portainer-server-将用于存储其数据库的卷">a. 创建 Portainer Server 将用于存储其数据库的卷：</h3>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker volume create portainer_data
 </code></pre></div><h3 id="b-下载并安装-portainer-server-容器">b. 下载并安装 Portainer Server 容器：</h3>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 8000:80 -p 9443:443 --name portainer <span class="se">\
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 9000:9000 --name portainer <span class="se">\
 </span><span class="se"></span>    --restart<span class="o">=</span>always <span class="se">\
 </span><span class="se"></span>    -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\
 </span><span class="se"></span>    -v portainer_data:/data <span class="se">\
