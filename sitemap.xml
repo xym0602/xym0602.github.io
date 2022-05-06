@@ -20,10 +20,10 @@
     <loc>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</loc>
     <lastmod>2021-11-10T00:59:02+08:00</lastmod>
   </url><url>
-    <loc>https://blog.xn--4gq986klnp.cn/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/bitwarden/</loc>
     <lastmod>2021-11-01T22:18:39+08:00</lastmod>
   </url><url>
-    <loc>https://blog.xn--4gq986klnp.cn/posts/bitwarden/</loc>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
     <lastmod>2021-11-01T22:18:39+08:00</lastmod>
   </url><url>
     <loc>https://blog.xn--4gq986klnp.cn/tags/kegin/</loc>
@@ -67,5 +67,13 @@
   </url><url>
     <loc>https://blog.xn--4gq986klnp.cn/about-hugo/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/soa/</loc>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/posts/soa-study/</loc>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93/</loc>
+  </url><url>
+    <loc>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91/</loc>
   </url>
 </urlset>

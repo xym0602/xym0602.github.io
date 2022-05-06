@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Soa Study">
+<meta itemprop="description" content="SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA">
+
+<meta itemprop="wordCount" content="8378">
+<meta itemprop="keywords" content="SOA,车云一体,车联网," /><meta property="og:title" content="Soa Study" />
+<meta property="og:description" content="SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.xn--4gq986klnp.cn/posts/soa-study/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Soa Study"/>
+<meta name="twitter:description" content="SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Soa Study</title>
+	<link rel="stylesheet" href="https://blog.xn--4gq986klnp.cn/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://blog.xn--4gq986klnp.cn">Melo&#39;s Blog</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://blog.xn--4gq986klnp.cn/posts/">Posts</a>
+				<a href="https://blog.xn--4gq986klnp.cn/about-me/">About Me</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="1049991853@qq.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1049991853&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener me" title="Qq"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path transform="scale(0.04) translate(75 40)" stroke-width="50" d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"></path></svg></a><a href="https://github.com/xym0602" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://blog.xn--4gq986klnp.cn/posts/">Posts</a></li>
+			<li><a href="https://blog.xn--4gq986klnp.cn/about-me/">About Me</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jan 1, 0001</span></div>
+				<h1>Soa Study</h1>
+			</header>
+			<div class="content">
+				<h3 id="soa架构">SOA架构<a href="#soa架构" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h4 id="soa概述">SOA概述<a href="#soa概述" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>面向服务的架构。服务和功能联系密切，<strong>而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。</strong></p>
+<h4 id="理解">理解<a href="#理解" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<blockquote>
+<p>将SOA架构搭建的平台同苹果App Store类比。SOA软件平台之于汽车，就好比App Store之于iPhone，它将汽车的硬件能力开放出来，供软件开发者调用。</p>
+</blockquote>
+<p>服务是SOA的主体，服务之间的关系构成了SOA软件架构。将服务比作砖石，那么SOA软件架构必然是参天大厦，而大厦不同的楼层，代表着服务之间的相互依赖、连接关系。即，SOA软件架构中，隐含着分层思想，服务是可分层的服务。上层服务使用下层服务，下层服务给上层提供能力支撑。通过将不同上层服务的需求抽离聚合，形成一个个下层服务，逐步迭代，最终形成SOA软件服务的分层架构。在新四化浪潮下，车辆联网的普及率非常高，所以我们设计的SOA软件架构包括车端SOA软件架构+云端软件架构。</p>
+<p>若换个角度，从用户体验“功能”出发，将这些最小单元的功能模块形容成「乐高玩具的每个零件」，借此可以对使用SOA软件平台有更直观地了解。如果我们将这些「零件」提供给用户和开发者，其实可以有多种组合形成丰富的功能。用户和开发者简单地通过几个模块拖拽和参数选择，定制专属功能。比如很多人开车时要抽烟，可能喜好就是打开天窗换气，但是你则希望将车窗打开。此时显然能有两个「零件」能够搭在一起，从而实现DIY和满足个性化需求。还比如，将主驾座椅按摩作为一个「零件」，单独调用；也可以与打开天窗配合，来实现自定义服务；还可以与疲劳监测功能配合，做出疲劳预警。</p>
+<p>可以发现，同一「零件」在不同例子中被用户调用，模块化后它们变得“可复用”。「零件」提前准备，可随时给用户的自定义服务增加功能，从而“易扩展”，其本质是一种<strong>面向用户的自定义编程模式</strong>。</p>
+<p>SOA升级的是软件架构，而呈现在用户面前的始终只有软件。用户将自己编程后的场景上传到SOA软件平台，车机端屏幕同步显示，可以便捷使用自己制作的APP。通过这一模式，在保证安全的前提下，用户可以开放地自己OTA，分享给其他人OTA，让汽车OTA频率提高。这会实现“常用常新”，也是车企保持产品竞争力的方式。</p>
+<h4 id="soa软件架构层级">SOA软件架构层级<a href="#soa软件架构层级" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>将SOA服务分为基础服务、扩展服务、应用服务。这三种服务类型，分别对应着不同能力属性，每一类服务都有着明确的服务单一性，即，每一个服务单元都只提供一种服务或者说只有一种功能。从这里也可以看出，服务的形成是因为功能，而不同使用者对同一个功能的需求，促使了服务下沉聚合。多个上层服务使用同一个下层服务，那么便出现了服务标准化的需求，简单说就是服务接口的标准化。</p>
+<p>SOA软件架构还有另外一些特性：高内聚、低耦合、服务平台无关化、服务动态部署/动态发现。所以，将基于SOA架构的操作系统分成如下层级，已实现完整意义上的SOA软件架构。</p>
+<ol>
+<li>OS AL层：屏蔽操作系统对SOA架构的影响</li>
+<li>SOA Framework层：提供基于SOA架构的服务设计所需的所有基础组件</li>
+<li>SOA Platform层：提供通用化的SOA服务，提高功能的复用率，共包含2个子块：a）基础服务层：可独立运行，无外部依赖的服务；b）扩展服务层：使用基础服务，进行横向组合扩展，实现复杂功能逻辑的服务</li>
+<li>外部服务层：根据项目需求，使用其他域控制器或云端提供的服务接口，实现“云管端一体化SOA软件平台”</li>
+<li>应用服务层：基于SOA Framework和SOA Platform提供的能力支撑，根据需求定制的逻辑业务功能。</li>
+<li>应用层适配接口层：将SOA服务与应用层隔离开，转化SOA服务接口为不同系统的native开发语言，加速应用层开发效率，使应用层与SOA服务层隔离。</li>
+<li>Cloud Service层：基于SOA软件架构，通过车云一体化软件组件实现车端—云端服务对等且位置无关化。</li>
+</ol>
+<p>并且，在层级设计过程中，域内/域间不同层级间的接口设计遵循标准C/C++接口规范和标准POSIX接口规范，与云端采用服务代理的方式，内部封装标准RESTful规范接口。这种规则赋予了SOA服务的平台无关化属性，从而，整个SOA软件架构也就实现了平台无关化</p>
+<h4 id="soa软件架构的设计方式">SOA软件架构的设计方式<a href="#soa软件架构的设计方式" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>SOA软件架构在巨大的推动力下在向前奔跑，设计优越的SOA软件架构，必然要满足以下特征：</p>
+<ol>
+<li>屏蔽异构性：SOA服务间采用标准中立的接口和契约，屏蔽不同硬件、系统、开发语言间的差异。</li>
+<li>服务可复用：可通过组件之间的组装、编排和重组，来实现服务的复用。</li>
+<li>数据共享：SOA服务层级中，所有服务均与总线连接，意味着每一个服务都可以获取到连接到总线上的服务所提供的数据，打破了传统功能的信息孤岛。</li>
+<li>灵活调整：基于总线的SOA服务，无需关心服务的位置，服务间以总线作为连接的桥梁，每个服务可根据需求灵活迁移、升级等。</li>
+<li>降低用户成本：用户无需关心各服务间的language binding，仅需通过现有标准化接口调用，实现服务功能即可。</li>
+<li>服务运行状态管控：SOA中的服务注册发现能力，可帮助用户识别异常服务，保证系统正常运行。</li>
+<li>云管端一体化服务平台：建立车端服务与云端服务的对等关系，云端服务与车端服务采用标准化的统一接口进行交互，完成服务功能。</li>
+</ol>
+<p>以上特征中，提到3个很重要的点：</p>
+<ol>
+<li>一个是服务治理能力</li>
+<li>另一个是总线，在这里特指的是ESB总线（Enterprise Service Bus）</li>
+<li>最后一个是上面提到的车云一体化软件组件</li>
+</ol>
+<p>其中，服务治理能力包含如下部分：</p>
+<ol>
+<li>
+<p>服务动态发现：服务支持动态插入、删除、更新，由服务提供方管理服务的所有依赖关系、资源需求等，并控制服务offer/stop的时序。</p>
+</li>
+<li>
+<p>服务设计：SSP对服务的实现有详细的设计要求，服务设计过程中，需满足相应要求来实现SOA化。</p>
+</li>
+<li>
+<p>服务实现：根据SSP提供的服务接口，完成接口实现的代码开发。</p>
+</li>
+<li>
+<p>服务部署：SSP在设计之初就继承了跨平台属性，服务可根据实际使用情况，在不同环境、硬件、系统中部署一个或多个实例，以达到最大化的重用率。</p>
+</li>
+<li>
+<p>服务管控：服务运行过程中，服务中的运行管理，包括服务状态管理、服务执行管理、相关的服务运行数据等，都可以被SSP监测到并通过收集到的数据判断服务的运行健康度，给服务乃至整个系统提供强有力的稳定、性能保证。除此之外，服务的权限配置也是很重要的考虑选项，服务发布后，可控制对外的授权管理，保证只有允许/授信的服务才可以使用服务。</p>
+</li>
+<li>
+<p>ESB总线：SOA软件架构有个显著的特征，即服务中心化思想。服务之间的所有连接，均需通过ESB总线通讯。ESB总线名称上是通讯总线，但我们认为，应该把ESB称之为SOA服务中间件更恰当，ESB总线实现了以下几个特征：</p>
+<ul>
+<li>
+<ol>
+<li>所有服务间禁止任何形式的直接连接，唯一许可的通信方式，就是通过网络调用服务接口</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>网络调用的具体实现方式不做强制要求，可根据不同系统的特性选择最优解决方案，目前支持Http、Binder、ZMQ、VIWI等，但均需支持以下能力：同步请求、异步请求、订阅、发布</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>服务接口设计以可公开作为设计导向，即，所有的服务接口，必须是可以对外部人员开发的，没有例外。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>车云一体化软件组件</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>实现车端—云端服务对等且位置无关化</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>并针对不同车型配置，实现个性化配置管理及相应的服务管理</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="难点">难点<a href="#难点" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>通过SOA开发者平台孵化软件产品，开发者以及普通用户根据可调用服务，开发出各种应用。客观而言，用户在面对企业产品和技术时变成了主动活跃的一方。而车企由此加强和用户的联系，从面向用户封闭走向开放，无疑是为了建立智能汽车生态。</p>
+<p>更高级的硬件架构、软件架构说到底只是带来效率更高的平台，到底最终能不能提供更丰富强大的功能、更好的用户体验，令生态活跃，关键在于上汽零束如何赋予平台健康的规则体系，平台运转起来才能体现价值。</p>
+<p>简单来说就是，平台方要给我回报，我才愿意坚持干这事。其中有许多现实问题存在，比如车企如何吸引开发者入驻平台？车企如何吸纳更多友商融入平台？而再深层次看，开发者不仅需要明面上的利润分成，宝贵的数据资源同样不愿舍弃。</p>
+<p>进一步要去思考的是，车企、生态参与方是否会将数据共享给开发者，这一点很难也很关键。如果数据无法流通形成闭环，开放平台的商业模式将很难建立。</p>
+<h4 id="关于soa软件平台的思考">关于SOA软件平台的思考<a href="#关于soa软件平台的思考" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>若背后的问题都努力解决后，仍有一个直击灵魂的疑问：SOA软件平台对于“软件定义汽车”而言，是否是决定性的因素，或者说不可或缺的角色？
+客观而言，汽车需要的是一套可以很好的从全局优化汽车软件和性能，统筹软件和工具链的东西，让开发变得更高效更低成本。但严格意义讲，不以服务的方式，企业也依然可以实现各种前沿功能比如自动驾驶，给用户去体验。如果想要超越竞争对手，还要回到前沿领域去硬碰硬。</p>
+<p>“软件定义汽车”这一发展趋势下，不会是过分强调SOA软件平台，而是将其作为部分。汽车最终会有一套最优化的软件平台、最匹配的操作系统、最适合的软件框架，各司其职并协同做好整车软件联动。若淡化这些部分，来落地SOA软件平台，效果可能不尽人意。</p>
+<p>一直在说，SOA软件之于汽车，就好比App Store之于iPhone。当然，App Store的成功离不开软件开发，它真正创造了历史，但App Store的成功也离不开苹果的软硬一体化策略。产品在硬件上的高度一致性，随之带来了软件开发的超级便利，它成为开发者涌入的催化剂，真正推动了App Store由0到1。</p>
+<p>所以回到汽车本身，软件定义汽车的全部，可能是要求车企站在整车架构的视角，运用软件思维，组织优化整车过去凌乱的逻辑关系，增强车端和云端的联动机制，最终来契合用户不断变化的功能需求。以上这些共同称为一项“事业”，而落地SOA软件平台，则是“事业”中的一项“KPI”。</p>
+<p>目前来说，构建开放的平台，构建方便开发者、用户使用的开发工具，可以借势而起，但还需要更多努力。</p>
+<h3 id="车云一体">车云一体<a href="#车云一体" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h4 id="车云一体架构的需求背景">车云一体架构的需求背景<a href="#车云一体架构的需求背景" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>随着时代的进步，技术的发展，不同主机厂商都大刀阔斧地开启了新四化的建设，再加上硬件技术日新月异的发展，使汽车这个具有空间属性的终端搭载了越来越多的硬件，让汽车的能力越来越多。同时，互联网技术的发展，5G高速网络的应用，车可以很方便地接入互联网，互联网赋能传统车辆更是大势所趋。</p>
+<p>基于软件架构的思路，将车云能力高度抽象、车云融合、相互协调，并同步对外开放，形成车云一体架构。</p>
+<p>车云一体架构实现车云协同，让车端可以自由使用云端服务，云端也可以方便地使用车端服务，使用者不用关心服务是在车端还是云端。从使用者、开发者以及OEM厂商的角度挖掘需求，提取能力共同特征，结合车云能力，形成车云一体架构，云为车赋能，车为人服务。</p>
+<h4 id="车云一体架构的优势">车云一体架构的优势<a href="#车云一体架构的优势" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ol>
+<li><strong>位置透明</strong>：车云服务的使用者不需要关心服务在车端还是云端，由平台自动完成服务的消费和响应；车端服务可以在云端访问，云端服务也可以在车端访问，形成车云一体化服务；</li>
+<li><strong>可重用</strong>：车云一体化软件组件抽象实现，就可以方便地提供能力服务，可以被不同的上层抽象和使用，不同的车辆可以使用云端同一个软件组件提供的能力服务，车辆内部也可以很容易地实现跨域访问，而不需要重复地构建；</li>
+<li><strong>易扩展</strong>：车云一体架构实现了组件的接口与实现分离，可以方便地进行实现的重构而不影响服务的消费者；也可以方便地进行云端、车端能力的扩展，通过服务发现的机制自动加入到SOA平台而不需要平台重构就可以向消费者提供服务；当然，还可以通过服务编排的机制根据不同的场景进行服务的调度和协调；方便进行扩展和使用；</li>
+<li><strong>易使用</strong>：服务消费者只关心抽象服务的使用，而不用关心具体使用哪些车辆服务，这些服务是来自车端还是云端、也不用关心车辆服务的组合和协调调度，更不用关心服务的实现机制和原理；</li>
+<li><strong>安全可控</strong>：通过访问权限暴露相关服务接口的机制，有效地控制了非法的访问，并且系统的安全机制和分层管控方法，更加方便地进行安全策略的控制和调整，保证了整个SOA平台的安全可靠；</li>
+</ol>
+<p>车云一体化软件组件的优势远不止于此，它解放了开发者的思维，提升了开发者对车辆的认识，可以让不同的角色聚焦到自己熟悉的领域，而屏蔽不必要的实现和部署细节，降低了上层应用对底层能力的依靠，解耦了不同功能组件的相互的依赖等等。</p>
+<h4 id="车云一体注意点">车云一体注意点<a href="#车云一体注意点" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>由于多层的安全控制、基于互联网的数据传输，这些都有可能增加系统的响应和延迟，对于一些时延要求较高的应用可能需要特殊的优化和处理；随着被管控车辆数量的增加，其并发的要求也必然增加，因此必须考虑云端服务的部署和扩展，尽可能避免单点故障，实现自动伸缩。车云一体架构也依赖网络的稳定，显然，网络的断开也必然影响服务的响应，因此，需要加大力度应对服务的治理，状态的跟踪，尽可能提升用户在使用上层应用时的体验。</p>
+<hr>
+<h3 id="基础知识积累">基础知识积累<a href="#基础知识积累" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h4 id="车的基本数据">车的基本数据<a href="#车的基本数据" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>车的数据主要包含三类，一是车况数据，比如，加速、制动、驻车、档位、远近光/雾灯/位置灯、车窗、安全带、方向盘转角、方向盘转速、空调、音乐/FM/蓝牙、动力蓄电池电压电流温度、电机电压电流温度状态、发送机转速、发动机状态、怠速状态、节气门绝对位置、平均点火角度、主缸压力、进气温度、冷却液温度、ABS状态、EBD状态、ESP状态、车身稳定性控制状态、牵引力控制系统状态、警告信息。数据二是车辆的性能数据，比如油门踏板开度、制动踏板百分比、制动踏板状态、发动机转速、瞬时油耗、百公里油耗、剩余油量、百米加速；三是车辆使用的数据，里程、生命周期、行驶路段、行驶时间、行驶方向、行驶时段、行驶频次、单次行驶时长、拥堵时长、畅行时长、乘坐人数、进度/维度/海拔、翻滚角/俯仰角/横摆角、胎温/胎压、倒车雷达测距、探头、空调、车速/加速度、雨刷器状态。</p>
+<h4 id="车联网涉及到的领域功能">车联网涉及到的领域功能<a href="#车联网涉及到的领域功能" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ol>
+<li>道路管理</li>
+<li>信息管理</li>
+<li>车辆管理</li>
+<li>影音娱乐</li>
+<li>健康与人身安全</li>
+<li>自动驾驶</li>
+<li>智能座舱</li>
+</ol>
+<h4 id="车联网三网融合">车联网三网融合<a href="#车联网三网融合" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li><strong>车内网</strong>是汽车上应用成熟的总线技术建立起的标准化整车网络，在今天所有上路的汽车上都搭载有车内网，它以CAN/LIN网络为主，负责绝大多数车内传感器、执行器信号的传递。</li>
+<li><strong>车载移动互联网</strong>是用户目前最能直接体验感受到的车联网，它指的是车辆通过CDMA/3G/4G的通讯技术与互联网进行无线连接，Carplay/OnStar/路宝目前都属于此列。</li>
+<li><strong>车际网</strong>是基于无线局域网通讯协议建立的动态网络，包括V2V和V2I等，乃至拓展至V2X，车际网是实现网联汽车的最重要基础，是三网中里较为不成熟的一部分，也是各国各机构的研究热点。举例来说，绿灯亮起，等待的车辆经过车际网互联通讯，可以实现同时起步，提高了交通效率，这就是车际网的应用之一。</li>
+</ul>
+<h4 id="智能座舱的核心技术16类">智能座舱的核心技术16类<a href="#智能座舱的核心技术16类" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<table>
+<thead>
+<tr>
+<th>技术</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LCD/OLED液晶显示技术</td>
+<td>硬件</td>
+</tr>
+<tr>
+<td>超分辨率显示处理技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>HUD抬头显示技术</td>
+<td>硬件+软件</td>
+</tr>
+<tr>
+<td>智能表面显示技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>电子玻璃成像技术</td>
+<td>硬件</td>
+</tr>
+<tr>
+<td>全息投影显示</td>
+<td>硬件+软件</td>
+</tr>
+<tr>
+<td>AR融合显示技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>视觉识别/分析技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>语音交互技术（含生源定位）</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>多媒体处理技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>3D建模与成像技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>车载操作系统（含虚拟化技术）</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>座舱域计算平台（控制器）</td>
+<td>硬件</td>
+</tr>
+<tr>
+<td>座舱域电子架构EEA</td>
+<td>硬件</td>
+</tr>
+<tr>
+<td>多音区与主动降噪技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>AI智能芯片技术</td>
+<td>硬件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="智能车联的核心技术8类">智能车联的核心技术8类<a href="#智能车联的核心技术8类" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<table>
+<thead>
+<tr>
+<th>技术</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V2X车车、车路、车人互联技术</td>
+<td>硬件+软件</td>
+</tr>
+<tr>
+<td>FOTA/SOTA远程升级技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>汽车信息安全技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>云计算技术</td>
+<td>硬件+软件</td>
+</tr>
+<tr>
+<td>大数据分析技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>车辆数据采集技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>移动互联网技术</td>
+<td>软件</td>
+</tr>
+<tr>
+<td>多媒体传输技术</td>
+<td>软件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="整理链接">整理链接<a href="#整理链接" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p><a href="https://www.woshipm.com/it/5235529.html">从互联网转行到汽车行业，你需要了解哪些知识？</a>
+<a href="http://www.woshipm.com/it/5402837.html">关于智能汽车和车企产品经理的基础认知</a>
+<a href="http://www.woshipm.com/pd/4860479.html">智能座舱系列一：智能化基础平台及架构</a></p>
+<h4 id="术语解释">*术语解释<a href="#术语解释" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p><strong>CP：</strong> Content Provider，即内容提供商。CP指内容的直接提供者,一般来讲,CP通过SP提供给他们的一些接口来完成内容信息的发布处理。</p>
+<p><strong>SP：</strong> Service Provider，即服务提供商。指移动互联网服务内容应用服务的直接提供者，负责根据用户的要求还发和提供适合用户使用的服务</p>
+<p><strong>POI：</strong> Point of Interest，可以翻译为“兴趣点”。在地理信息系统中，一个POI可以是一栋房子、一个商铺、一个邮筒、一个公交站等。</p>
+<p><strong>ADAS：</strong> Advanced Driving Assistance System，高级驾驶辅助系统，是利用安装在车上的各式各样传感器（毫米波雷达、激光雷达、单\双目摄像头以及卫星导航），在汽车行驶过程中随时来感应周围的环境，收集数据，进行静态、动态物体的辨识、侦测与追踪，并结合导航地图数据，进行系统的运算与分析，从而预先让驾驶者察觉到可能发生的危险，有效增加汽车驾驶的舒适性和安全性。</p>
+<p><strong>IVI：</strong> In-Vehicle Infotainment，车载信息娱乐系统，是采用车载专用中央处理器，基于车身总线系统和互联网服务，形成的车载综合信息处理系统。IVI能够实现包括三维导航、实时路况、IPTV、辅助驾驶、故障检测、车辆信息、车身控制、移动办公、无线通讯、基于在线的娱乐功能及TSP服务等一系列应用，极大的提升了车辆电子化、网络化和智能化水平。</p>
+<p><strong>OTA：</strong> Over-the-Air Technology，空中下载技术，即车辆自身的系统可以在线升级</p>
+<p><strong>V2X：</strong> vehicle to everything，即车对外界的信息交换。车联网通过整合全球定位系统（GPS）导航技术、车对车交流技术、无线通信及远程感应技术奠定了新的汽车技术发展方向，实现了手动驾驶和自动驾驶的兼容。简单来说，搭配了该系统的车型，在自动驾驶模式下，能够通过对实时交通信息的分析，自动选择路况最佳的行驶路线，从而大大缓解交通堵塞。除此之外，通过使用车载传感器和摄像系统，还可以感知周围环境，做出迅速调整，从而实现“零交通事故”。例如，如果行人突然出现，可以自动减速至安全速度或停车。</p>
+<p><strong>ECU：</strong> Electronic Control Unit，即电子控制单元，也可以叫 “行车电脑”。决定整车性能的最重要的部分就是它的ECU。作为现代汽车电子的核心元件之一 ，ECU电子控制单元在汽车中也许有好几个，每个管理不同的功能；而每个ECU系统之间又有信息交换。虽然在整车上的控制系统越来越复杂，但它仍然必须具备最基本的结构—微处理器（CPU）、存储器（ROM、RAM）、输入/输出接口(I/O)、模数转换器(A/D)以及整形、驱动等大规模集成电路。</p>
+<p><strong>MCU：</strong> Micro Controller Unit，即微控制单元，又称单片微型计算机(Single Chip Microcomputer)，是指随着大规模集成电路的出现及其发展，将计算机的CPU、RAM、ROM、定时数器和多种I/O接口集成在一片芯片上，形成芯片级的计算机，为不同的应用场合做不同组合控制。</p>
+<p><strong>BCM：</strong> 车身控制模块，主要功能是实现离散的控制功能，对众多用电器进行控制。主要控制汽车车身用电器，如灯具、雨刮、门锁、电动窗、天窗等。就是这些用电器的开关信号输入给BCM，BCM直接或通过继电器控制相应电器工作。</p>
+<p><strong>AUTOSAR：</strong> AUTomotive Open System Architecture，汽车开放系统架构，AUTOSAR是由全球汽车制造商、部件供应商及其他电子、半导体和软件系统公司联合建立，各成员保持开发合作伙伴关系。自2003年起，各伙伴公司携手合作，致力于为汽车工业开发一个开放的、标准化的软件架构。AUTOSAR这个架构有利于车辆电子系统软件的交换与更新，并为高效管理愈来愈复杂的车辆电子、软件系统提供了一个基础。此外，AUTOSAR在确保产品及服务质量的同时，提高了成本效率。</p>
+<p><strong>新四化：</strong> 电气化、网络化、智能化、共享化。电气化是指新能源电力系统领域；智能化是指无人驾驶或驾驶辅助子系统；联网是指车联网的布局；共享是指汽车共享和移动旅行。</p>
+<p><strong>GEEP 3.0、4.0、5.0：</strong> 2020年，长城汽车开发出GEEP 3.0电子电气架构，从分布式架构转转成功能域架构，将架构调整为车身控制、动力底盘、智能座舱、智能驾驶4个域控制器，实现软件自主。目前GEEP 3.0已经应用在长城汽车的全系车型上。
+为了进一步集中整车控制软件，实现高效集成管理、高度安全可靠和更快需求响应，长城汽车再一次将整车软、硬件高度整合，形成了基于中央计算和区域控制的下一代全新电子电气架构—GEEP 4.0。
+全新电子电气架构采用SOA（面向服务的架构）设计理念，开放标准API（应用程序编程接口），全面满足用户智能化需求。预计将于明年推出，并率先搭载到长城汽车全新电动、混动平台，后续扩展到旗下全系车型。
+更高一级的GEEP 5.0的研发也与GEEP 4.0同步启动，GEEP 5.0将实现全车只有一个大脑，完全形成智能机器人，100%SOA化，全面完成整车标准化软件平台的搭建，并将于2024年实现产品落地。</p>
+<p><strong>TSP：</strong> Telematics Service Provider，汽车远程服务提供商，在Telematics产业链居于核心地位，上接汽车、车载设备制造商、网络运营商，下接内容提供商。Telematics服务集合了位置服务、Gis服务和通信服务等现代计算机技术，为车主和个人提供强大的服务：导航、娱乐、资讯、安防、SNS、远程保养的。除专门的TSP平台服务商（如休斯、飞驰镁物等）外，目前，许多第三方服务商（如整车厂商、电信运营商、互联网内容服务商等）亦开始进入TSP领域，构建属于自己的TSP平台。</p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/soa">SOA</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93">车云一体</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91">车联网</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>8378 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>0001-01-01 08:05 &#43;0805</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://blog.xn--4gq986klnp.cn/posts/hugo-github-personalblog/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>Hugo&#43;Github Pages 搭建个人博客手记萌新向</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2022 <a href="https://blog.xn--4gq986klnp.cn">Melo</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://blog.xn--4gq986klnp.cn/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://blog.xn--4gq986klnp.cn/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>
