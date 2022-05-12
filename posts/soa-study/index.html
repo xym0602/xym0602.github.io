@@ -10,7 +10,7 @@
 <meta itemprop="name" content="车云一体及SOA相关知识学习">
 <meta itemprop="description" content="SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA"><meta itemprop="datePublished" content="2022-05-06T16:45:57&#43;08:00" />
 <meta itemprop="dateModified" content="2022-05-06T16:45:57&#43;08:00" />
-<meta itemprop="wordCount" content="8378">
+<meta itemprop="wordCount" content="9359">
 <meta itemprop="keywords" content="SOA,车云一体,车联网," /><meta property="og:title" content="车云一体及SOA相关知识学习" />
 <meta property="og:description" content="SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA" />
 <meta property="og:type" content="article" />
@@ -76,7 +76,7 @@
 <blockquote>
 <p>将SOA架构搭建的平台同苹果App Store类比。SOA软件平台之于汽车，就好比App Store之于iPhone，它将汽车的硬件能力开放出来，供软件开发者调用。</p>
 </blockquote>
-<p>服务是SOA的主体，服务之间的关系构成了SOA软件架构。将服务比作砖石，那么SOA软件架构必然是参天大厦，而大厦不同的楼层，代表着服务之间的相互依赖、连接关系。即，SOA软件架构中，隐含着分层思想，服务是可分层的服务。上层服务使用下层服务，下层服务给上层提供能力支撑。通过将不同上层服务的需求抽离聚合，形成一个个下层服务，逐步迭代，最终形成SOA软件服务的分层架构。在新四化浪潮下，车辆联网的普及率非常高，所以我们设计的SOA软件架构包括车端SOA软件架构+云端软件架构。</p>
+<p>服务是SOA的主体，服务之间的关系构成了SOA软件架构。将服务比作砖石，那么SOA软件架构必然是参天大厦，而大厦不同的楼层，代表着服务之间的相互依赖、连接关系。即，SOA软件架构中，隐含着分层思想，服务是可分层的服务。上层服务使用下层服务，下层服务给上层提供能力支撑。通过将不同上层服务的需求抽离聚合，形成一个个下层服务，逐步迭代，最终形成SOA软件服务的分层架构。在新四化浪（电动化、网联化、智能化、共享化）潮下，车辆联网的普及率非常高，所以我们设计的SOA软件架构包括车端SOA软件架构+云端软件架构。</p>
 <p>若换个角度，从用户体验“功能”出发，将这些最小单元的功能模块形容成「乐高玩具的每个零件」，借此可以对使用SOA软件平台有更直观地了解。如果我们将这些「零件」提供给用户和开发者，其实可以有多种组合形成丰富的功能。用户和开发者简单地通过几个模块拖拽和参数选择，定制专属功能。比如很多人开车时要抽烟，可能喜好就是打开天窗换气，但是你则希望将车窗打开。此时显然能有两个「零件」能够搭在一起，从而实现DIY和满足个性化需求。还比如，将主驾座椅按摩作为一个「零件」，单独调用；也可以与打开天窗配合，来实现自定义服务；还可以与疲劳监测功能配合，做出疲劳预警。</p>
 <p>可以发现，同一「零件」在不同例子中被用户调用，模块化后它们变得“可复用”。「零件」提前准备，可随时给用户的自定义服务增加功能，从而“易扩展”，其本质是一种<strong>面向用户的自定义编程模式</strong>。</p>
 <p>SOA升级的是软件架构，而呈现在用户面前的始终只有软件。用户将自己编程后的场景上传到SOA软件平台，车机端屏幕同步显示，可以便捷使用自己制作的APP。通过这一模式，在保证安全的前提下，用户可以开放地自己OTA，分享给其他人OTA，让汽车OTA频率提高。这会实现“常用常新”，也是车企保持产品竞争力的方式。</p>
@@ -189,6 +189,27 @@
 <li><strong>安全可控</strong>：通过访问权限暴露相关服务接口的机制，有效地控制了非法的访问，并且系统的安全机制和分层管控方法，更加方便地进行安全策略的控制和调整，保证了整个SOA平台的安全可靠；</li>
 </ol>
 <p>车云一体化软件组件的优势远不止于此，它解放了开发者的思维，提升了开发者对车辆的认识，可以让不同的角色聚焦到自己熟悉的领域，而屏蔽不必要的实现和部署细节，降低了上层应用对底层能力的依靠，解耦了不同功能组件的相互的依赖等等。</p>
+<h4 id="车云一体的应用价值">车云一体的应用价值<a href="#车云一体的应用价值" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>车云一体的基本概念，是车端的各ECU与云端之间基干SOA的设计思想以服务化的方式通信的软件架构。车内各ECU的服务抽象(如车门开关)与云端服务能力(如生态服务)通过统一的服务化协议完成车与云之间服务的自由调度，充分发挥整车各传感器/执行器与云平台服务能力组合带来的场景化优势，从而支撑OEM构建海量个性化的智能应用场景。</p>
+<p>车云一体的应用价值如下：</p>
+<ol>
+<li>
+<p><strong>OEM个性化智能场景的支撑</strong>
+基于车云一体架构带来的服务化基础能力，实现车云SOA服务的高效稳定、协调工作，充分开发车辆硬件能力实现最大化功能和出行场景智能化，构建更贴近使用场景的智能化以及跨域创新组合的场景化应用(如车内摄像头疲劳检测和座椅震动的联动)，是支撑OEM打造智能汽车的核心技术架构，体现OEM品牌的个性化和差异化。</p>
+</li>
+<li>
+<p><strong>云端与整车级系统联动能力的提升</strong>
+得益于整车电子电器架构向以太网架构的进化，车内各域的系统级能力(如诊断、OTA、日志)也通过服务化封装方式的打通实现动态可配置，同时车内服务可以通过车云一体架构被云端发现和调度。因此，云端对于整车级数据采集、远程诊断/标定、整车OTA远程控车都可以通过服务化协议实现动态策略的能力提升，比如云端数据采集可指定采集的ECU采集的数据项、采集的频率、采集的策略(如时间周期)等。 </p>
+</li>
+<li>
+<p><strong>支持新场景的快速迭代</strong>
+基于车/云服务化的封装可以通过工具化、图形化、流程化的方式支撑新的功能场景的快速开发，面向不同技术背景人员也能够通过场景的企划设计，快速地完成制作。相比原有基于信号的开发模式通过封装好的服务进行组合可以大幅度提升开发效率，缩减开发周期，降低沟通成本，让持续的场景化服务成为OEM新的业务模式。帮助OEM快速应对市场对于智能化功能的需求变化，从而支撑软件服务围绕整车全生命周期服务的能力。</p>
+</li>
+<li>
+<p><strong>OEM生态构建与服务运营支撑</strong>
+相比于传统的车联网服务运营模式，车云一体带来的智能化的体验，将整车能力和互联网生态紧密的连接，无论从用户体验的提升(如音乐与氛围灯的联动还是面向普通车主的个性化场景功能编辑带来的可玩性都会激发车主用户的参与感从而提升付费意愿。另外，对于第三方开发者的能力开放，相比车机联网模式带来更多的能力提升，支撑更多智能化应用场景的价值创造，帮助OEM构建自己的软件服务生态，使软件收益成为OEM全新的商业模式。</p>
+</li>
+</ol>
 <h4 id="车云一体注意点">车云一体注意点<a href="#车云一体注意点" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 <p>由于多层的安全控制、基于互联网的数据传输，这些都有可能增加系统的响应和延迟，对于一些时延要求较高的应用可能需要特殊的优化和处理；随着被管控车辆数量的增加，其并发的要求也必然增加，因此必须考虑云端服务的部署和扩展，尽可能避免单点故障，实现自动伸缩。车云一体架构也依赖网络的稳定，显然，网络的断开也必然影响服务的响应，因此，需要加大力度应对服务的治理，状态的跟踪，尽可能提升用户在使用上层应用时的体验。</p>
 <hr>
@@ -329,7 +350,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="整理链接">整理链接<a href="#整理链接" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="学习参考链接">学习参考链接<a href="#学习参考链接" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 <p><a href="https://www.woshipm.com/it/5235529.html">从互联网转行到汽车行业，你需要了解哪些知识？</a></p>
 <p><a href="http://www.woshipm.com/it/5402837.html">关于智能汽车和车企产品经理的基础认知</a></p>
 <p><a href="http://www.woshipm.com/pd/4860479.html">智能座舱系列一：智能化基础平台及架构</a></p>
@@ -358,7 +379,7 @@
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/soa">SOA</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93">车云一体</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91">车联网</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>8378 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>9359 字</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2022-05-06 16:45 &#43;0800</p>
 			</footer>
 		</article>
