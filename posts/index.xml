@@ -17,6 +17,7 @@
 			<guid>https://blog.xn--4gq986klnp.cn/posts/soa-study/</guid>
 			<description>SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA</description>
 			<content type="html"><![CDATA[<h3 id="soa架构">SOA架构</h3>
+<p><img src="/image/soa-study/soa-study,jpeg" alt="alt soa-study" title="长城汽车SOA架构设计理念"></p>
 <h4 id="soa概述">SOA概述</h4>
 <p>面向服务的架构。服务和功能联系密切，<strong>而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。</strong></p>
 <h4 id="理解">理解</h4>
