@@ -645,6 +645,48 @@ MIRA为远程操作驾驶提供模块化、可扩展的认证硬件和软件系�
 		</item>
 		
 		<item>
+			<title>智能汽车新功能收集06.20-06.25</title>
+			<link>https://blog.xn--4gq986klnp.cn/posts/0620-0625benchmarkingnews/</link>
+			<pubDate>Sat, 25 Jun 2022 17:50:01 +0800</pubDate>
+			
+			<guid>https://blog.xn--4gq986klnp.cn/posts/0620-0625benchmarkingnews/</guid>
+			<description>CarPlay 技术调研 实现技术 根据CSDN-CarPlay介绍及知乎回答文章介绍，CarPlay是能将iOS设备的界面通过USB或wireless(蓝牙</description>
+			<content type="html"><![CDATA[<h4 id="carplay-技术调研">CarPlay 技术调研</h4>
+<h5 id="实现技术">实现技术</h5>
+<p>根据<a href="https://blog.csdn.net/huangke2012hk/article/details/51206925?spm=1001.2014.3001.5502">CSDN-CarPlay介绍</a>及<a href="https://www.zhihu.com/question/50722862">知乎回答</a>文章介绍，CarPlay是能将iOS设备的界面通过USB或wireless(蓝牙+Wi-Fi)利用<strong>屏幕投射技术，手机将屏幕内容以视频数据的方式投影显示</strong>在传输到汽车中控台，中控台解码显示在屏幕上。2.手机管理车载屏幕，喇叭以及其他资源。车载机和手机任何一方对这些资源的使用都需要经过手机的仲裁。</p>
+<blockquote>
+<p>目前暂无新发布会上功能调研结果，仍需继续跟踪</p>
+</blockquote>
+<h5 id="连接技术">连接技术</h5>
+<p><img src="/image/0620-0625benchmarkingnews/1.webp" alt=""></p>
+<p>大致的流程是：</p>
+<ol>
+<li>iPhone 和车机蓝牙连接（发现、设置、配对等过程）</li>
+<li>车机发送 Wi-Fi 证书到 iPhone</li>
+<li>iPhone 和车机的 Wi-Fi 连接完成后，完成 CarPlay 会话的创建</li>
+<li>蓝牙断开（原因：避免干扰，大部分车机 Wi-Fi 只支持 2.4 GHz 频段）</li>
+</ol>
+<p><a href="https://www.bilibili.com/read/cv10601147?ivk_sa=1024320u">「CarPlay小知识」无线 CarPlay 连接那些事</a></p>
+<blockquote>
+<p>详细讲解连接技术的文章
+<a href="https://blog.csdn.net/huangke2012hk/article/details/51226220?spm=1001.2014.3001.5502">CarPlay wireless(蓝牙+WiFi)连接方案(蓝牙部分)</a>
+<a href="https://blog.csdn.net/huangke2012hk/article/details/51240615?spm=1001.2014.3001.5501">CarPlay wireless(蓝牙+WiFi)连接方案(Wi-Fi部分)</a>
+<a href="https://blog.csdn.net/huangke2012hk/article/details/51225887?spm=1001.2014.3001.5502">CarPlay wired(USB)连接方案</a></p>
+</blockquote>
+<h4 id="理想l9">理想L9</h4>
+<ul>
+<li>双高通骁龙 8155芯片</li>
+<li>双15.7英寸OLED屏</li>
+<li>一屏安装或删除应用，三屏自动同步</li>
+</ul>
+<h4 id="飞凡r7">飞凡R7</h4>
+<p>飞凡RISING OS基于零束银河数字化体验平台独家定制打造，配备高通骁龙SA8155芯片，以车载领域主流虚拟化技术及RTOS+Android AOSP 操作系统为基础，搭载云管端一体化SOA软件架构需要的诸多平台化模块
+基于零束SOA软件架构，为用户提供了丰富的应用及生态，同时也能让用户定制属于自己的<strong>SOA创意场景</strong>
+飞凡RISING OS交互上，主打“直觉式交互”，减轻用户认知和学习负担</p>
+]]></content>
+		</item>
+		
+		<item>
 			<title>智能汽车新功能收集06.13-06.17</title>
 			<link>https://blog.xn--4gq986klnp.cn/posts/0613-0617benchmarkingnews/</link>
 			<pubDate>Fri, 17 Jun 2022 17:37:00 +0800</pubDate>

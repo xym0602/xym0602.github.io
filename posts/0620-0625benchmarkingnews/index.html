@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="智能汽车新功能收集06.20-06.25">
+<meta itemprop="description" content="CarPlay 技术调研 实现技术 根据CSDN-CarPlay介绍及知乎回答文章介绍，CarPlay是能将iOS设备的界面通过USB或wireless(蓝牙"><meta itemprop="datePublished" content="2022-06-25T17:50:01&#43;08:00" />
+<meta itemprop="dateModified" content="2022-06-25T17:50:01&#43;08:00" />
+<meta itemprop="wordCount" content="625">
+<meta itemprop="keywords" content="SOA,车云一体,车联网," /><meta property="og:title" content="智能汽车新功能收集06.20-06.25" />
+<meta property="og:description" content="CarPlay 技术调研 实现技术 根据CSDN-CarPlay介绍及知乎回答文章介绍，CarPlay是能将iOS设备的界面通过USB或wireless(蓝牙" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.xn--4gq986klnp.cn/posts/0620-0625benchmarkingnews/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-25T17:50:01&#43;08:00" />
+<meta property="article:modified_time" content="2022-06-25T17:50:01&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="智能汽车新功能收集06.20-06.25"/>
+<meta name="twitter:description" content="CarPlay 技术调研 实现技术 根据CSDN-CarPlay介绍及知乎回答文章介绍，CarPlay是能将iOS设备的界面通过USB或wireless(蓝牙"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>智能汽车新功能收集06.20-06.25</title>
+	<link rel="stylesheet" href="https://blog.xn--4gq986klnp.cn/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://blog.xn--4gq986klnp.cn">Melo&#39;s Blog</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://blog.xn--4gq986klnp.cn/posts/">Posts</a>
+				<a href="https://blog.xn--4gq986klnp.cn/about-me/">About Me</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="mailto:1049991853@qq.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1049991853&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener me" title="Qq"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path transform="scale(0.04) translate(75 40)" stroke-width="50" d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"></path></svg></a><a href="https://github.com/xym0602" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://blog.xn--4gq986klnp.cn/posts/">Posts</a></li>
+			<li><a href="https://blog.xn--4gq986klnp.cn/about-me/">About Me</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jun 25, 2022</span></div>
+				<h1>智能汽车新功能收集06.20-06.25</h1>
+			</header>
+			<div class="content">
+				<h4 id="carplay-技术调研">CarPlay 技术调研<a href="#carplay-技术调研" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h5 id="实现技术">实现技术<a href="#实现技术" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h5>
+<p>根据<a href="https://blog.csdn.net/huangke2012hk/article/details/51206925?spm=1001.2014.3001.5502">CSDN-CarPlay介绍</a>及<a href="https://www.zhihu.com/question/50722862">知乎回答</a>文章介绍，CarPlay是能将iOS设备的界面通过USB或wireless(蓝牙+Wi-Fi)利用<strong>屏幕投射技术，手机将屏幕内容以视频数据的方式投影显示</strong>在传输到汽车中控台，中控台解码显示在屏幕上。2.手机管理车载屏幕，喇叭以及其他资源。车载机和手机任何一方对这些资源的使用都需要经过手机的仲裁。</p>
+<blockquote>
+<p>目前暂无新发布会上功能调研结果，仍需继续跟踪</p>
+</blockquote>
+<h5 id="连接技术">连接技术<a href="#连接技术" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h5>
+<p><img src="/image/0620-0625benchmarkingnews/1.webp" alt=""></p>
+<p>大致的流程是：</p>
+<ol>
+<li>iPhone 和车机蓝牙连接（发现、设置、配对等过程）</li>
+<li>车机发送 Wi-Fi 证书到 iPhone</li>
+<li>iPhone 和车机的 Wi-Fi 连接完成后，完成 CarPlay 会话的创建</li>
+<li>蓝牙断开（原因：避免干扰，大部分车机 Wi-Fi 只支持 2.4 GHz 频段）</li>
+</ol>
+<p><a href="https://www.bilibili.com/read/cv10601147?ivk_sa=1024320u">「CarPlay小知识」无线 CarPlay 连接那些事</a></p>
+<blockquote>
+<p>详细讲解连接技术的文章
+<a href="https://blog.csdn.net/huangke2012hk/article/details/51226220?spm=1001.2014.3001.5502">CarPlay wireless(蓝牙+WiFi)连接方案(蓝牙部分)</a>
+<a href="https://blog.csdn.net/huangke2012hk/article/details/51240615?spm=1001.2014.3001.5501">CarPlay wireless(蓝牙+WiFi)连接方案(Wi-Fi部分)</a>
+<a href="https://blog.csdn.net/huangke2012hk/article/details/51225887?spm=1001.2014.3001.5502">CarPlay wired(USB)连接方案</a></p>
+</blockquote>
+<h4 id="理想l9">理想L9<a href="#理想l9" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li>双高通骁龙 8155芯片</li>
+<li>双15.7英寸OLED屏</li>
+<li>一屏安装或删除应用，三屏自动同步</li>
+</ul>
+<h4 id="飞凡r7">飞凡R7<a href="#飞凡r7" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>飞凡RISING OS基于零束银河数字化体验平台独家定制打造，配备高通骁龙SA8155芯片，以车载领域主流虚拟化技术及RTOS+Android AOSP 操作系统为基础，搭载云管端一体化SOA软件架构需要的诸多平台化模块
+基于零束SOA软件架构，为用户提供了丰富的应用及生态，同时也能让用户定制属于自己的<strong>SOA创意场景</strong>
+飞凡RISING OS交互上，主打“直觉式交互”，减轻用户认知和学习负担</p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/soa">SOA</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93">车云一体</a></span><span class="tag"><a href="https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91">车联网</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>625 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2022-06-25 17:50 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://blog.xn--4gq986klnp.cn/posts/0704-0709benchmarkingnews/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>智能汽车新功能收集07.04-07.09</span>
+			</a>
+			<a class="prev-post" href="https://blog.xn--4gq986klnp.cn/posts/0613-0617benchmarkingnews/">
+				<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>智能汽车新功能收集06.13-06.17</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2023 <a href="https://blog.xn--4gq986klnp.cn">Melo</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://blog.xn--4gq986klnp.cn/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://blog.xn--4gq986klnp.cn/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>
