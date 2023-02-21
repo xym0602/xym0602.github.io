@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 17 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 19:13:58 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>car</title>
-      <link>https://blog.xn--4gq986klnp.cn/tags/car/</link>
-      <pubDate>Fri, 17 Jun 2022 17:37:00 +0800</pubDate>
+      <title>SOA</title>
+      <link>https://blog.xn--4gq986klnp.cn/tags/soa/</link>
+      <pubDate>Sat, 18 Feb 2023 19:13:58 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/tags/car/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/tags/soa/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>SOA</title>
-      <link>https://blog.xn--4gq986klnp.cn/tags/soa/</link>
-      <pubDate>Fri, 17 Jun 2022 17:37:00 +0800</pubDate>
+      <title>车云一体</title>
+      <link>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93/</link>
+      <pubDate>Sat, 18 Feb 2023 19:13:58 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/tags/soa/</guid>
+      <guid>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>车联网</title>
+      <link>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91/</link>
+      <pubDate>Sat, 18 Feb 2023 19:13:58 +0800</pubDate>
+      
+      <guid>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91/</guid>
       <description></description>
     </item>
     
@@ -63,24 +72,6 @@
     </item>
     
     <item>
-      <title>车云一体</title>
-      <link>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93/</link>
-      <pubDate>Fri, 06 May 2022 16:45:57 +0800</pubDate>
-      
-      <guid>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E4%BA%91%E4%B8%80%E4%BD%93/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>车联网</title>
-      <link>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91/</link>
-      <pubDate>Fri, 06 May 2022 16:45:57 +0800</pubDate>
-      
-      <guid>https://blog.xn--4gq986klnp.cn/tags/%E8%BD%A6%E8%81%94%E7%BD%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bitwarden</title>
       <link>https://blog.xn--4gq986klnp.cn/tags/bitwarden/</link>
       <pubDate>Wed, 10 Nov 2021 00:59:02 +0800</pubDate>
@@ -95,6 +86,15 @@
       <pubDate>Wed, 10 Nov 2021 00:59:02 +0800</pubDate>
       
       <guid>https://blog.xn--4gq986klnp.cn/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>腾讯云</title>
+      <link>https://blog.xn--4gq986klnp.cn/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</link>
+      <pubDate>Mon, 01 Nov 2021 22:18:39 +0800</pubDate>
+      
+      <guid>https://blog.xn--4gq986klnp.cn/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</guid>
       <description></description>
     </item>
     

@@ -7,95 +7,95 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 17 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 19:13:58 +0800</lastBuildDate><atom:link href="https://blog.xn--4gq986klnp.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>智能汽车新功能收集6.13-6.17</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/6.13-6.17benchmarkingnews/</link>
-      <pubDate>Fri, 17 Jun 2022 17:37:00 +0800</pubDate>
+      <title>智能汽车新功能收集23.02.11-23.02.18</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/230211-230218benchmarkingnews/</link>
+      <pubDate>Sat, 18 Feb 2023 19:13:58 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/6.13-6.17benchmarkingnews/</guid>
-      <description>一、高合 HiPhi X H-SOA超体电子电气架构，让用户可通过中控屏，实现车门、空调、座椅的操控，升空车门、灯光、音乐、香氛联动 HiPhi X的图形化开发自定义</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/230211-230218benchmarkingnews/</guid>
+      <description>问界M7亮点功能收集 预约充电： 可预约电费波谷价格较低的时间充电 可设置结束时间，并可设置若到达结束时间，车辆电量还未达到充电上限，是否继续充电</description>
     </item>
     
     <item>
-      <title>项目规划方案怎么写</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/how-to-write-the-project-planning-scheme/</link>
-      <pubDate>Tue, 07 Jun 2022 15:53:57 +0800</pubDate>
+      <title>智能汽车新功能收集10.31-11.05</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/1031-1105benchmarkingnews/</link>
+      <pubDate>Sat, 05 Nov 2022 19:10:34 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/how-to-write-the-project-planning-scheme/</guid>
-      <description>写项目规划方案主要需要注意以下几个方面：一、背景目标；二、技术方案；三、实施策略；四、计划安排；五、风险及应对；六、结语。关于项目规划方案的</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/1031-1105benchmarkingnews/</guid>
+      <description>一、BeyonCa正式亮相-深度场景定义汽车 深度场景定义汽车，为用户带来极致体验和价值 优雅运动，引领豪华车设计潮流 智能驱动，增进用户幸福和健</description>
     </item>
     
     <item>
-      <title>车云一体及SOA相关知识学习</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/soa-study/</link>
-      <pubDate>Fri, 06 May 2022 16:45:57 +0800</pubDate>
+      <title>智能汽车新功能收集10.08-10.14</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/1008-1014benchmarkingnews/</link>
+      <pubDate>Fri, 14 Oct 2022 19:07:38 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/soa-study/</guid>
-      <description>SOA架构 SOA概述 面向服务的架构。服务和功能联系密切，而汽车SOA就是将汽车各子系统中最小功能的逻辑单位抽离出来，封装成服务。 理解 将SOA</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/1008-1014benchmarkingnews/</guid>
+      <description>爱驰SUV U6 AI交互式氛围灯：通过AI智能识别音乐律动，使灯光与音乐节奏实现同频切换，提升座舱的优雅格调氛围 OMS生物监测系统：防止外出时婴</description>
     </item>
     
     <item>
-      <title>个人常用的 Docker 镜像安装记录</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</link>
-      <pubDate>Wed, 10 Nov 2021 00:59:02 +0800</pubDate>
+      <title>智能汽车新功能收集09.26-09.30</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/0926-0930benchmarkingnews/</link>
+      <pubDate>Fri, 30 Sep 2022 19:04:53 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/docker-study-note/</guid>
-      <description>0. Portainer a. 创建 Portainer Server 将用于存储其数据库的卷： docker volume create portainer_data b. 下载并安装 Portainer Server 容器： docker run -d -p 9000:9000 --name portainer \ --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:latest 1. Epic 周免游戏自动领取 首先创建 docker-compose.yml 文件，内</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/0926-0930benchmarkingnews/</guid>
+      <description>林肯之道APP 胎压监测系统 维保 远程车辆启动、解锁 车辆空气净化 远程充电管家 手机导航无缝衔接 小雪OS 驾车行为分析:小雪OS能时刻记录和分析车主的</description>
     </item>
     
     <item>
-      <title>【已失效】腾讯云部署（几乎）白嫖 Bitwarden</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/bitwarden/</link>
-      <pubDate>Mon, 01 Nov 2021 22:18:39 +0800</pubDate>
+      <title>智能汽车新功能收集09.13-0917</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/0913-0917benchmarkingnews/</link>
+      <pubDate>Sat, 17 Sep 2022 19:02:21 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/bitwarden/</guid>
-      <description>0. 前言 随着在大大小小各式各样网站注册的账号增多，需要记下的账号密码也特别容易忘记，况且所有网站都用相同的用户名密码特别不安全。这时需要小本本</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/0913-0917benchmarkingnews/</guid>
+      <description>一、捷途大圣 场景模式 斗战模式：排气声浪的轰鸣……（略） 舒享模式：是一体式飞航座椅一键躺平，音乐和香氛联动，叫醒服务； 守护模式：移动“氧吧”实</description>
     </item>
     
     <item>
-      <title>Kegin T201p</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/kegin-t201p/</link>
-      <pubDate>Thu, 09 Sep 2021 18:27:49 +0800</pubDate>
+      <title>智能汽车新功能收集09.05-09.09</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/0905-0909benchmarkingnews/</link>
+      <pubDate>Fri, 09 Sep 2022 18:50:25 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/kegin-t201p/</guid>
-      <description>当我发现我想写日记的时候，就总要逼迫自己用特别正式的口吻去表达，这样的思想成为了我记录文字的枷锁，本身这些内容就是写给自己看的，不必那么认真</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/0905-0909benchmarkingnews/</guid>
+      <description>一、问界M5 EV 手机日程、导航等信息自动同步至车机 车辆在信号不好的位置能够将手机的网络共享给车机 二、钟学丹：助力汽车产业构建车云一体的数据驱动</description>
     </item>
     
     <item>
-      <title>利用 Gooreplacer 解决 reCAPTCHA 无法显示的问题</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</link>
-      <pubDate>Sat, 04 Sep 2021 12:44:00 +0800</pubDate>
+      <title>智能汽车新功能收集08.29-09.03</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/0829-0903benchmarkingnews/</link>
+      <pubDate>Sat, 03 Sep 2022 18:33:49 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/ues-gooreplacer-to-display-recaptcha/</guid>
-      <description>0. 前言 对于某些网站登录注册，需要使用 reCAPTCHA 进行验证。reCAPTCHA 是谷歌的验证码服务，众所周知，没有这个网站，所以验证码无法加载。那么该如何</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/0829-0903benchmarkingnews/</guid>
+      <description>OPPO Carlink 优势 开放包容、自然流转、可信安全 特点 车机：车企对车机系统依旧自主可控，在不更换车机系统的前提下即可获得手机能力和丰富的应用生态 手机：可通</description>
     </item>
     
     <item>
-      <title>利用 Cloud Studio 云端搭建 Hugo 博客</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/cloud-studio-hugo/</link>
-      <pubDate>Mon, 26 Apr 2021 17:31:02 +0800</pubDate>
+      <title>智能汽车新功能收集08.22-08.26</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/0822-0826benchmarkingnews/</link>
+      <pubDate>Fri, 26 Aug 2022 18:30:07 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/cloud-studio-hugo/</guid>
-      <description>需求 之前在 Linux 上部署了 Hugo 的博客，发现我需要在不同设备上都安装 Hugo，而且是在不同的环境下，就显得很麻烦，即便可以通过 Github 同步博客的源文件，但还</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/0822-0826benchmarkingnews/</guid>
+      <description>一、小鹏G9 3D人机交互系统：基于与Unity 3D渲染引擎，通过感知系统将真实世界立体化投射到车机屏幕内，实时呈现人驾与车驾过程中的驾驶感知</description>
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>https://blog.xn--4gq986klnp.cn/about-me/</link>
-      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      <title>智能汽车新功能收集08.15-08.20</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/0815-0820benchmarkingnews/</link>
+      <pubDate>Sat, 20 Aug 2022 18:27:17 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/about-me/</guid>
-      <description>关于我 简介</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/0815-0820benchmarkingnews/</guid>
+      <description>埃安Y 配备全感知交互系统、超视距召唤泊车、2.0㎡浩瀚天幕 内置了QQ音乐、喜马拉雅、火山车娱、车内拍短视频、卡拉OK 人声克隆功能 结合当前温度</description>
     </item>
     
     <item>
-      <title>Hugo&#43;Github Pages 搭建个人博客手记萌新向</title>
-      <link>https://blog.xn--4gq986klnp.cn/posts/hugo-github-personalblog/</link>
-      <pubDate>Mon, 19 Apr 2021 21:23:20 +0800</pubDate>
+      <title>智能汽车新功能收集08.01-08.12</title>
+      <link>https://blog.xn--4gq986klnp.cn/posts/0801-0812benchmarkingnews/</link>
+      <pubDate>Fri, 12 Aug 2022 18:24:00 +0800</pubDate>
       
-      <guid>https://blog.xn--4gq986klnp.cn/posts/hugo-github-personalblog/</guid>
-      <description>0. 前言 记得在19年那段时间，在无意间了解到 Github Pages 可以托管静态页面作为个人博客站，于是开始兴致勃勃研究了一会，新鲜几天之后，搭建完毕，还绑了自己</description>
+      <guid>https://blog.xn--4gq986klnp.cn/posts/0801-0812benchmarkingnews/</guid>
+      <description>吉利星瑞 · 银河OS系统 移动端飞屏功能：手机、中控信息无延迟传输至仪表及HUD 车辆健康扫描（动态3D形式） “影院”场景模式 几何E “无感”启动系</description>
     </item>
     
   </channel>
