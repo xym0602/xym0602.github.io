@@ -1763,5 +1763,36 @@ git pull    <span class="c1"># or git pull origin main</span>
 ]]></content>
 		</item>
 		
+		<item>
+			<title>Product Design Summary</title>
+			<link>https://blog.xn--4gq986klnp.cn/posts/product-design-summary/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			
+			<guid>https://blog.xn--4gq986klnp.cn/posts/product-design-summary/</guid>
+			<description>产品设计总结 从宏观角度来说，产品设计遵循几个步骤： 探究清楚项目背景 明确目标用户 了解用户痛点 如何解决痛点 细化设计 总结过程中遇到的问题及解决思路</description>
+			<content type="html"><![CDATA[<h2 id="产品设计总结">产品设计总结</h2>
+<h4 id="从宏观角度来说产品设计遵循几个步骤">从宏观角度来说，产品设计遵循几个步骤：</h4>
+<ol>
+<li>探究清楚项目背景</li>
+<li>明确目标用户</li>
+<li>了解用户痛点</li>
+<li>如何解决痛点</li>
+<li>细化设计</li>
+<li>总结过程中遇到的问题及解决思路</li>
+<li>结果是什么</li>
+<li>未来规划及需要提升的地方</li>
+</ol>
+<h4 id="从微观上来说产品设计有几个设计原则">从微观上来说，产品设计有几个设计原则：</h4>
+<ol>
+<li>易用性，操作简单，用户无需思考</li>
+<li>一致性，减少用户学习成本</li>
+<li>简洁性，界面简介明了</li>
+<li>流畅性，保证核心业务的流畅</li>
+<li>反馈性，让用户明白操作生效</li>
+<li>探索性，避免用户操作出错，出错予以相应提示</li>
+</ol>
+]]></content>
+		</item>
+		
 	</channel>
 </rss>
